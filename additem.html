@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Author: Andrew Philips -->
+<!-- MiU project 2 -->
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<!-- <meta name="description" content="Get all your quick shipping needs met with our organizer. "/> -->
+	<meta name="robots" content="index, follow"/>
+	<meta name="viewport" content="user-scalable=no, width=device-width"/>
+	<meta name="MobileOptimized" content="320" />
+	<meta name="HandheldFriendly" content="true" />
+	<title>Journeys - Adventure Scrapbook</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" /> 
+</head>
+<body>
+<div id="content">
+	<div data-role="page" id="home">
+		<div data-role="header">
+	<header>
+		<h1>Journeys</h1>
+		<!-- <div>
+			<p>Get your express shipping needs filled with our organizing app.</p>
+		</div> -->
+	</header>
+	<ul id="errors"></ul>
+	<form id="shippingform" action="#" method="post">
+		<fieldset id="shipfieldset">
+			<legend>Event Information</legend>
+				<div>
+					<ul id="packagedata">
+						<li>
+						<label for="packagenick">Title</label>
+						<input name="packagenick" type="text" value="" id="packagenick" />
+						</li>
+						<li>
+						<label for="datesend">Event Date</label>
+						<input name="datesend" type="date" value="" id="datesend"/>
+						</li>
+						<li id="select">
+						<label for="category">Category</label>
+						</li>
+						<!-- <li>Rush Shipping Options:</li>
+						<li><input id="rushorder" name="rushorder" type="checkbox" value="Yes" /><label for="rushorder">Epic Moment?</label></li> -->
+						<!-- <li><input id="dontrush" name="dontrush" type="checkbox" value="Yes" /><label for="dontrush">Don't Expedite Shipment</label></li> -->
+						<li>
+						<label for="numberpackages">Rating</label>
+						<input id="numberpackages" name="numberpackages" type="range" min="0" max="5" step="1" value="2" /><output name="result">  </output>
+						</li>
+						<li>
+						<label for="notes">Notes</label><br />
+						<textarea id="notes"></textarea>
+						</li>
+						<!-- commented out for MiU
+						<li><label for="shipNotify">Send an "Item Shipped" notification?</label>
+							<ul>
+								<li>
+								<input id="yesshipped" name="shipNotify" type="radio" value="Yes"/>
+								<label for="yesshipped">Yes!</label>
+								</li>
+								<li>
+								<input id="noshipped" name="shipNotify" type="radio" value="No"/>
+								<label for="noshipped">No.</label>
+								</li>
+							</ul>
+						</li>
+						<li><label for="progressNotify">Update progress of shipped package?</label> 
+							<ul>
+								<li>
+								<input id="yesprogress" name="progressNotify" type="radio" value="Yes"/>
+								<label for="yesprogress">Yes!</label>
+								</li>
+								<li>
+								<input id="noprogress" name="progressNotify" type="radio" value="No"/>
+								<label for="noprogress">No thanks.</label>
+								</li>
+							</ul>
+						</li> -->
+					</ul>
+				</div>
+		</fieldset>
+		<a href="construction.html"><input type="submit" value="Save Details" id="submitbutton" /></a>
+	</form>
+</div>
+<div id="footer">
+	<ul>
+	</ul>
+</div>
+<div data-role="footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a id="cleardatalink" href="#">Clear Stored Data</a></li>
+					<li><a id="displaydatalink" href="#">Display Data</a></li>
+					<li><a id="newitemlink" href="additem.html" style="display:none;">Add New Event</a></li>
+
+				</ul>
+			</div>
+		</div>
+<script src="js/main.js" type = "text/javascript"></script>
+</body>
+</html>

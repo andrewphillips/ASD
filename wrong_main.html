@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<!-- Andrew Phillips -->
+<!-- MiU 0212 -->
+<!-- Project 3 -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Journeys - Adventure Scrapbook</title>
+<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Mobile IE needs ClearType for smoothing fonts -->
+<meta http-equsaFavoritev="cleartype" content="on">
+<!-- StyleSheets under here -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+<link rel="stylesheet" href="css/ps/style.css"/>
+<link rel="stylesheet" href="css/ps/jquery-mobile.css"/>
+<link rel="stylesheet" href="css/ps/photoswipe.css"/>
+<link rel="stylesheet" href="css/wrongstyle.css" />
+<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+<script src="js/libs/modernizr.custom.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="home">
+	<div data-role="header" data-theme="c" id="homehead">
+		<h1 id="headerh1">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content" id="one">
+		<header>
+		<p>
+			Capture all your travel adventures with this handy app!
+		</p>
+		</header>
+		<div id="cta1">
+			<a href="#addscrapbook"><img src="images/add_new.png" alt="add journey"/></a>
+		</div>
+		<h3 id="catbrowse">Browse Your Adventures!</h3>
+		<div data-role="collapsible-set" id="cats">
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>USA</h3>
+				<ul>
+					<li><a href="#usaLand" data-role="button">Landscapes</a></li>
+					<li><a href="#usaFood" data-role="button">Food</a></li>
+					<li><a href="#usaMaps" data-role="button">Maps :: Routes</a></li>
+					<li><a href="#usaFavorite" data-role="button">Favorite Places</a></li>
+				</ul>
+			</div>
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>New Zealand</h3>
+				<ul>
+					<li><a href="#nzLand" data-role="button">Landscapes</a></li>
+					<li><a href="#nzFood" data-role="button">Food</a></li>
+					<li><a href="#nzMaps" data-role="button">Maps :: Routes</a></li>
+					<li><a href="#nzFavorite" data-role="button">Favorite Places</a></li>
+				</ul>
+			</div>
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Mexico</h3>
+				<ul>
+					<li><a href="#mexicoLand" data-role="button">Landscapes</a></li>
+					<li><a href="#mexicoFood" data-role="button">Food</a></li>
+					<li><a href="#mexicoMaps" data-role="button">Maps :: Routes</a></li>
+					<li><a href="#mexicoFavorite" data-role="button">Favorite Places</a></li>
+				</ul>
+			</div>
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Europe</h3>
+				<ul>
+					<li><a href="#europeLand" data-role="button">Landscapes</a></li>
+					<li><a href="#europeFood" data-role="button">Food</a></li>
+					<li><a href="#europeMaps" data-role="button">Maps :: Routes</a></li>
+					<li><a href="#europeFavorite" data-role="button">Favorite Places</a></li>
+				</ul>
+			</div>
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Japan</h3>
+				<ul>
+					<li><a href="#japanLand" data-role="button">Landscapes</a></li>
+					<li><a href="#japanFood" data-role="button">Food</a></li>
+					<li><a href="#japanMaps" data-role="button">Maps :: Routes</a></li>
+					<li><a href="#japanFavorite" data-role="button">Favorite Places</a></li>
+				</ul>
+			</div>
+		</div>
+		<p>
+			<a href="#list" data-role="button" id="viewall">View Your Scrapbook</a>
+		</p>
+		<p>
+			<a href="main.html" data-role="button" id="wrongApp">Good App -> Refresh Page</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page gallery -->
+<!-- Start of second page: #two -->
+<div data-role="page" id="browsegal" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul class="gallery">
+			<li><a href="#myimage1" rel="external"><img src="images/p1.jpg" alt="Image 001"/></a>
+			<p style="text-align:center;">
+				East Cost View
+			</p>
+			</li>
+			<li><a href="#myimage2" rel="external"><img src="images/p2.jpg" alt="Image 002"/></a>
+			<p style="text-align:center;">
+				Food Stop
+			</p>
+			</li>
+			<li><a href="#myimage3" rel="external"><img src="images/p3.jpg" alt="Image 003"/></a>
+			<p style="text-align:center;">
+				USA Travel Route!
+			</p>
+			</li>
+			<li><a href="#myimage4" rel="external"><img src="images/p4.jpg" alt="Image 004"/></a>
+			<p style="text-align:center;">
+				Fav Place in NY
+			</p>
+			</li>
+			<li><a href="#myimage5" rel="external"><img src="images/p5.jpg" alt="Image 005"/></a>
+			<p style="text-align:center;">
+				New Zealand!
+			</p>
+			</li>
+			<li><a href="#myimage6" rel="external"><img src="images/p6.jpg" alt="Image 006"/></a>
+			<p style="text-align:center;">
+				Candy Shop
+			</p>
+			</li>
+			<li><a href="#myimage7" rel="external"><img src="images/p7.jpg" alt="Image 007"/></a>
+			<p style="text-align:center;">
+				New Zealand Map
+			</p>
+			</li>
+			<li><a href="#myimage8" rel="external"><img src="images/p8.jpg" alt="Image 008"/></a>
+			<p style="text-align:center;">
+				Auckland
+			</p>
+			</li>
+			<li><a href="#myimage9" rel="external"><img src="images/p9.jpg" alt="Image 009"/></a>
+			<p style="text-align:center;">
+				Beautiful Mexico!
+			</p>
+			</li>
+			<li><a href="#myimage10" rel="external"><img src="images/p10.jpg" alt="Image 010"/></a>
+			<p style="text-align:center;">
+				Mexican Market
+			</p>
+			</li>
+			<li><a href="#myimage11" rel="external"><img src="images/p11.jpg" alt="Image 011"/></a>
+			<p style="text-align:center;">
+				Monterrey
+			</p>
+			</li>
+			<li><a href="#myimage12" rel="external"><img src="images/p12.jpg" alt="Image 012"/></a>
+			<p style="text-align:center;">
+				Beaches!!!
+			</p>
+			</li>
+			<li><a href="#myimage13" rel="external"><img src="images/p13.jpg" alt="Image 013"/></a>
+			<p style="text-align:center;">
+				Germany Hotel
+			</p>
+			</li>
+			<li><a href="#myimage14" rel="external"><img src="images/p14.jpg" alt="Image 014"/></a>
+			<p style="text-align:center;">
+				Market Findings
+			</p>
+			</li>
+			<li><a href="#myimage15" rel="external"><img src="images/p15.jpg" alt="Image 015"/></a>
+			<p style="text-align:center;">
+				Leaving Munich…
+			</p>
+			</li>
+			<li><a href="#myimage16" rel="external"><img src="images/p16.jpg" alt="Image 016"/></a>
+			<p style="text-align:center;">
+				Love Rome!
+			</p>
+			</li>
+			<li><a href="#myimage17" rel="external"><img src="images/p17.jpg" alt="Image 017"/></a>
+			<p style="text-align:center;">
+				Tokyo!
+			</p>
+			</li>
+			<li><a href="#myimage18" rel="external"><img src="images/p18.jpg" alt="Image 018"/></a>
+			<p style="text-align:center;">
+				Japanese Dish
+			</p>
+			</li>
+			<li><a href="#myimage19" rel="external"><img src="images/p19.jpg" alt="Image 019"/></a>
+			<p style="text-align:center;">
+				Osaka Landing!
+			</p>
+			</li>
+			<li><a href="#myimage20" rel="external"><img src="images/p20.jpg" alt="Image 020"/></a>
+			<p style="text-align:center;">
+				Fuji!!
+			</p>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image1 -->
+<div data-role="page" id="image1" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="http://www.mytravelimages.com/usa/usa%20568-426/usa_city.jpg"/>
+		<ul>
+			<li>Title: East Cost View</li <li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: USA</li>
+			<li>Region: USA | Landscapes</li>
+			<li>Rating: 9</li>
+			<li>Notes :: Stories: We got to take the elevator all the way to to the top of this building.  What a view! </li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image2 -->
+<div data-role="page" id="image2" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="http://blackgirlfit.com/wp-content/uploads/2011/09/mcdonalds-coupons.jpg"/>
+		<ul>
+			<li>Title: McDonalds Stop!</li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: USA</li>
+			<li>Region: USA | Food</li>
+			<li>Rating: 3</li>
+			<li>Notes :: Stories: We were desperate for a snack, so we hit up McD's! </li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image3 -->
+<div data-role="page" id="image3" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="images/p3.jpg"/>
+		<ul>
+			<li>Title: On the road again!</li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: USA</li>
+			<li>Region: USA | Maps</li>
+			<li>Rating: 6</li>
+			<li>Notes :: Stories: This is the route we took to get from ATL to NY! </li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image4 -->
+<div data-role="page" id="image4" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="http://www.mytravelimages.com/usa/usa%20568-426/usa_holidays.jpg"/>
+		<ul>
+			<li>Title: Great Memory :-)</li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: USA</li>
+			<li>Region: USA | Favorite Places</li>
+			<li>Rating: 7</li>
+			<li>Notes :: Stories: We made it to NY! I love the Rockefeller Center!</li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image5 -->
+<div data-role="page" id="image5" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="http://www.mytravelimages.com/new_zealand/new%20zealand%20568-426/new_zealand_queenstown.jpg"/>
+		<ul>
+			<li>Title: Queenstown!!!</li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: New Zealand</li>
+			<li>Region: New Zealand | Landscapes</li>
+			<li>Rating: 9</li>
+			<li>Notes :: Stories: We fell in love with this place.  So beautiful! </li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image6 -->
+<div data-role="page" id="image6" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="http://i.cdn.turner.com/cnn/2011/HEALTH/03/30/fda.food.dye.health/t1larg.food.dye.jpg"/>
+		<ul>
+			<li>Title: Candy Store</li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: New Zealand</li>
+			<li>Region: New Zealand | Food</li>
+			<li>Rating: 9</li>
+			<li>Notes :: Stories: We found some yummy candy here.  Biggest candy store since NY! </li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image7 -->
+<div data-role="page" id="image7" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="images/p7.jpg"/>
+		<ul>
+			<li>Title: NZ!</li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: New Zealand</li>
+			<li>Region: New Zealand | Maps :: Routes</li>
+			<li>Rating: 9</li>
+			<li>Notes :: Stories: Here's where we stayed, mostly. </li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image8 -->
+<div data-role="page" id="image8" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="http://www.mytravelimages.com/new_zealand/new%20zealand%20568-426/new_zealand_auckland.jpg"/>
+		<ul>
+			<li>Title: Cool Tower</li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: New Zealand</li>
+			<li>Region: New Zealand | Favorite Places</li>
+			<li>Rating: 9</li>
+			<li>Notes :: Stories: Auckland! </li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image9 -->
+<div data-role="page" id="image9" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="http://www.mytravelimages.com/mexico/mexico%20568-426/mexico_chichen_itza.jpg"/>
+		<ul>
+			<li>Title: Chichen Itza!</li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: Mexico</li>
+			<li>Region: Mexico | Landscapes</li>
+			<li>Rating: 9</li>
+			<li>Notes :: Stories: Breathtaking! </li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image10 -->
+<div data-role="page" id="image10" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="http://healthy-usa.com/healthy-food/healthy-48.jpg"/>
+		<ul>
+			<li>Title: Our Market Trip</li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: Mexico</li>
+			<li>Region: Mexico | Food</li>
+			<li>Rating: 9</li>
+			<li>Notes :: Stories: Some yummies that we bought! </li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image11 -->
+<div data-role="page" id="image11" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="images/p11.jpg"/>
+		<ul>
+			<li>Title: Monterrey</li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: Mexico</li>
+			<li>Region: Mexico | Maps :: Routes</li>
+			<li>Rating: 9</li>
+			<li>Notes :: Stories: Where we stayed for 2 nights. </li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image12 -->
+<div data-role="page" id="image12" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="http://www.mytravelimages.com/mexico/mexico%20568-426/mexico_beach.jpg"/>
+		<ul>
+			<li>Title: Beach!</li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: Mexico</li>
+			<li>Region: Mexico | Favorite Places</li>
+			<li>Rating: 9</li>
+			<li>Notes :: Stories: Love! </li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image13 -->
+<div data-role="page" id="image13" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="http://www.mytravelimages.com/germany/germany%20568-426/germany_hotel.jpg"/>
+		<ul>
+			<li>Title: Hotel</li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: Europe</li>
+			<li>Region: Europe | Landscapes</li>
+			<li>Rating: 9</li>
+			<li>Notes :: Stories: We were in the city to much, I decided to put this here :-)</li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image14 -->
+<div data-role="page" id="image14" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="http://www.prwatch.org/files/images/WFM.jpg"/>
+		<ul>
+			<li>Title: Market</li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: Europe</li>
+			<li>Region: Europe | Food</li>
+			<li>Rating: 9</li>
+			<li>Notes :: Stories: Yummy veggies at the local market! </li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image15 -->
+<div data-role="page" id="image15" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="images/p15.jpg"/>
+		<ul>
+			<li>Title: Trip!</li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: Europe</li>
+			<li>Region: Europe | Maps :: Routes</li>
+			<li>Rating: 9</li>
+			<li>Notes :: Stories: The trip from Munich to Rome that we traveled.  Amazing! </li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image16 -->
+<div data-role="page" id="image16" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="http://www.mytravelimages.com/italy/italy%20568-426/italy_rome_theater.jpg"/>
+		<ul>
+			<li>Title: The Rome Theatre</li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: Europe</li>
+			<li>Region: Europe | Favorite Places</li>
+			<li>Rating: 9</li>
+			<li>Notes :: Stories: Beautiful </li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image17 -->
+<div data-role="page" id="image17" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="http://www.mytravelimages.com/japan/japan%20568-426/japan_tokyo.jpg"/>
+		<ul>
+			<li>Title: Tokyo</li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: Japan</li>
+			<li>Region: Japan | Landscapes</li>
+			<li>Rating: 9</li>
+			<li>Notes :: Stories: Tokyo from up high! </li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image18 -->
+<div data-role="page" id="image18" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="http://media17.onsugar.com/files/2011/09/35/6/1852/18523990/1643ee428511d039_Chinese_Food_Picture_B.jpg"/>
+		<ul>
+			<li>Title: Yummy Noodles</li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: Japan</li>
+			<li>Region: Japan | Food</li>
+			<li>Rating: 9</li>
+			<li>Notes :: Stories: My fav dish there! </li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image19 -->
+<div data-role="page" id="image19" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="images/p19.jpg"/>
+		<ul>
+			<li>Title: Landing</li>
+			<li>Date: 12-17-2010</li>
+			<li>Category: Japan</li>
+			<li>Region: Japan | Maps :: Routes</li>
+			<li>Rating: 9</li>
+			<li>Notes :: Stories: Our flight landed in Osaka </li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page image20 -->
+<div data-role="page" id="image20" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<img src="http://www.mytravelimages.com/japan/japan%20568-426/japan_mt_fuji.jpg"/>
+		<ul>
+			<li>Title: Mt. Fuji!!!!!</li 
+			<li>Date: 12-17-2010</li>
+			<li>Category: Japan</li>
+			<li>Region: Japan | Favorite Places</li>
+			<li>Rating: 9</li>
+			<li>Notes :: Stories: This was such a sight to see.  We loved all the mountains we found while traveling! </li>
+		</ul>
+		<p>
+			<a href="#browsegal" data-role="button">Return to Gallery</a>
+		</p>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page list -->
+<div data-role="page" id="list" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<h2>Scrapbook Items</h2>
+		<ul class="news">
+			<li><a href="#myimage1">East Cost View</a></li>
+			<li><a href="#myimage2">Food Stop</a></li>
+			<li><a href="#myimage3">USA Travel Route!</a></li>
+			<li><a href="#myimage4">Fav place in NY</a></li>
+			<li><a href="#myimage5"> New Zealand!</a></li>
+			<li><a href="#myimage6"> Candy shop</a></li>
+			<li><a href="#myimage7"> New Zealand Map</a></li>
+			<li><a href="#myimage8"> Auckland</a></li>
+			<li><a href="#myimage9"> Beautiful Mexico!</a></li>
+			<li><a href="#myimage10"> Mexican Market</a></li>
+			<li><a href="#myimage11"> Monterrey</a></li>
+			<li><a href="#myimage12"> Amazing beaches!!!</a></li>
+			<li><a href="#myimage13"> Germany Hotel</a></li>
+			<li><a href="#myimage14"> Market Findings</a></li>
+			<li><a href="#myimage15"> Leaving Munich… </a></li>
+			<li><a href="#myimage16"> Love Rome!</a></li>
+			<li><a href="#myimage17"> Tokyo!</a></li>
+			<li><a href="#myimage18"> Japanese Dish</a></li>
+			<li><a href="#myimage19"> Osaka Landin! </a></li>
+			<li><a href="#myimage20"> Fuji!!!</a></li>
+		</ul>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page usaLand -->
+<div data-role="page" id="usaLand" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image1">
+		<img src="http://www.mytravelimages.com/usa/usa%20568-426/usa_city.jpg"/>
+			<h3>View from an awesome building.</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page usaFood -->
+<div data-role="page" id="usaFood" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image2">
+		<img src="http://blackgirlfit.com/wp-content/uploads/2011/09/mcdonalds-coupons.jpg"/>
+			<h3>Food Stop!</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page usaMaps -->
+<div data-role="page" id="usaMaps" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image3">
+		<img src="images/p3.jpg"/>
+			<h3>USA Travel route</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page usaFavorite -->
+<div data-role="page" id="usaFavorite" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image4">
+		<img src="http://www.mytravelimages.com/usa/usa%20568-426/usa_holidays.jpg"/>
+			<h3>My fav place in NY</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page nzLand -->
+<div data-role="page" id="nzLand" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image5">
+		<img src="http://www.mytravelimages.com/new_zealand/new%20zealand%20568-426/new_zealand_queenstown.jpg"/>
+			<h3>New Zealand 1st Stop</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page nzFood -->
+<div data-role="page" id="nzFood" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image6">
+		<img src="http://i.cdn.turner.com/cnn/2011/HEALTH/03/30/fda.food.dye.health/t1larg.food.dye.jpg"/>
+			<h3>Fun Candy Shop</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page nzMaps -->
+<div data-role="page" id="nzMaps" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image7">
+		<img src="images/p7.jpg"/>
+			<h3>New Zealand Map</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page nzFavorite -->
+<div data-role="page" id="nzFavorite" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image8">
+		<img src="http://www.mytravelimages.com/new_zealand/new%20zealand%20568-426/new_zealand_auckland.jpg"/>
+			<h3>Tower in Auckland</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page mexicoLand -->
+<div data-role="page" id="mexicoLand" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image9">
+		<img src="http://www.mytravelimages.com/mexico/mexico%20568-426/mexico_chichen_itza.jpg"/>
+			<h3>Chichen Itzal!</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page mexicoFood -->
+<div data-role="page" id="mexicoFood" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image10">
+		<img src="http://healthy-usa.com/healthy-food/healthy-48.jpg"/>
+			<h3>Mexican Market</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page mexicoMaps -->
+<div data-role="page" id="mexicoMaps" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image11">
+		<img src="images/p11.jpg"/>
+			<h3>Monterrey!</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page mexicoFavorite -->
+<div data-role="page" id="mexicoFavorite" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image12">
+		<img src="http://www.mytravelimages.com/mexico/mexico%20568-426/mexico_beach.jpg"/>
+			<h3>Beautiful Beaches!</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page europeLand -->
+<div data-role="page" id="europeLand" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image13">
+		<img src="http://www.mytravelimages.com/germany/germany%20568-426/germany_hotel.jpg"/>
+			<h3>Germany Hotel</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page europeFood -->
+<div data-role="page" id="europeFood" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image14">
+		<img src="http://www.prwatch.org/files/images/WFM.jpg"/>
+			<h3>Market Food :-)</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page europeMaps -->
+<div data-role="page" id="europeMaps" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image15">
+		<img src="images/p15.jpg"/>
+			<h3>Good-bye, Munich!</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page europeFavorite -->
+<div data-role="page" id="europeFavorite" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image16">
+		<img src="http://www.mytravelimages.com/italy/italy%20568-426/italy_rome_theater.jpg"/>
+			<h3>Rome is amazing</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page japanLand -->
+<div data-role="page" id="japanLand" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image17">
+		<img src="http://www.mytravelimages.com/japan/japan%20568-426/japan_tokyo.jpg"/>
+			<h3>Tokyo!</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page japanFood -->
+<div data-role="page" id="japanFood" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image18">
+		<img src="http://media17.onsugar.com/files/2011/09/35/6/1852/18523990/1643ee428511d039_Chinese_Food_Picture_B.jpg"/>
+			<h3>Japanese Dish</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page japanMaps -->
+<div data-role="page" id="japanMaps" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image19">
+		<img src="images/p19.jpg"/>
+			<h3>Osaka Landing</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page japanFavorite -->
+<div data-role="page" id="japanFavorite" data-add-back-btn="true">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+			<a href="#image20">
+		<img src="http://www.mytravelimages.com/japan/japan%20568-426/japan_mt_fuji.jpg"/>
+			<h3>Fuji!!!</h3>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page addscrapbook -->
+<div data-role="page" id="addscrapbook">
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content" >
+
+		<form action="" method="post" id="scrapbookForm">
+		
+			<div data-role="fieldcontain">
+				<label for="jtitle">Title</label>
+				<input name="jtitle" type="text" id="jtitle" class="required"/>
+			</div>
+			<div data-role="fieldcontain">
+				<label for="jdate">Journey Date</label>
+				<input name="jdate" type="date" id="jdate" class="date required"/>
+				<small class="prompt">MM/DD/YYYY</small>
+			</div>
+			<div data-role="fieldcontain">
+				<input id="addMedia" type="button" value="Add Media" data-iconpos="top" data-icon="star" data-theme="a" data-corners="false"/>
+			</div>
+
+			<div data-role="fieldcontain"><!-- select -->
+				<label for="category">Region</label>
+				<select id="groups">
+					<option data-placeholder="true">Choose a Region</option>
+					<option value="USA">USA</option>
+					<option value="New Zealand">New Zealand</option>
+					<option value="Mexico">Mexico</option>
+					<option value="Europe">Europe</option>
+					<option value="Japan">Japan</option>
+				</select>
+			</div>
+			<div data-role="fieldcontain"><!-- subselect -->
+				<label for="subcategory">Category</label>
+				<select id="subgroups">
+<!--					<option data-placeholder="true">Choose a Category</option> -->
+					<option value="usaLands">USA | Landscapes</option>
+					<option value="usaFood">USA | Food</option>
+					<option value="usaMaps">USA | Maps :: Routes</option>
+					<option value="usaFavorite">USA | Favorites</option>
+					<option value="nzLand">New Zealand | Landscapes</option>
+					<option value="nzFood">New Zealand | Food</option>
+					<option value="nzMaps">New Zealand | Maps :: Routes</option>
+					<option value="nzFavorite">New Zealand | Favorites</option>
+					<option value="mexicoLand">Mexico | Landscapes</option>
+					<option value="mexicoFood">Mexico | Food</option>
+					<option value="mexicoMaps">Mexico | Maps :: Routes</option>
+					<option value="mexicoFavorite">Mexico | Favorites</option>
+					<option value="europeLand">Europe | Landscapes</option>
+					<option value="europeFood">Europe | Food</option>
+					<option value="europeMaps">Europe | Maps :: Routes</option>
+					<option value="europeFavorite">Europe | Favorites</option>
+					<option value="japanLand">Japan | Landscapes</option>
+					<option value="japanFood">Japan | Food</option>
+					<option value="japanMaps">Japan | Maps</option>
+					<option value="japanFavorite">Japan | Favorites</option>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="jrating">Rating</label>
+				<input name="jrating" type="range" min="0" max="10" step="1" value="0" id="jrating"/>
+			</div>
+			<div data-role="fieldcontain">
+				<label for="notes">Notes :: Stories</label><br />
+				<textarea id="notes"></textarea>
+			</div>
+			<div data-role="fieldcontain" id="reset" >
+			<input type="reset" value="Clear All" data-theme="c" />
+			</div>
+			<div data-role="fieldcontain">
+				<a href="#home" id="mysubmit" type="submit" value="Save Journey" data-theme="c">Save Journey
+				</a>
+			</div>
+		</form>
+
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#list" data-icon="search">Search</a></li>
+				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>
+				<li><a href="#addscrapbook" data-icon="plus">Add New</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page addscrapbook -->
+<!-- JavaScript under here -->
+<script type="text/javascript" src="js/ps/klass.min.js"></script>
+<script type="text/javascript" src="js/ps/code.photoswipe-3.0.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+<script type="text/javascript" src="js/ps.js"></script>
+<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/wrong_main.js"></script>
+</body>
+</html>
