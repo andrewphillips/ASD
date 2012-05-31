@@ -1,185 +1,173 @@
 // Andrew Phillips
-// MiU 0212
-// Default :: Dummy Data
+// ASD 1206
+// Default Data
 
-var json = {
-		"asset1": {
-			"title": ["Title:", "Tim's Fall"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Images"],
-			"epic": ["Epic Moment:", "Yes"],
-			"rating": ["Stars:", "4"],
-			"notes": ["Notes :: Stories", "This is when Tim fell into the river!"],
-		},
+function autoFillData(){
+	var json = {
+			"asset1": {
+				"jtitle": ["Title:", "East Coast View"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "USA"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "We got to take the elevator all the way to to the top of this building.  What a view!!"],
+			},
+					
+			"asset2": {
+				"jtitle": ["Title:", "McDonalds Stop"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "USA"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "We were desperate for a snack, so we hit up McD's!"],
+			},
+
+			"asset3": {
+				"jtitle": ["Title:", "On the road again"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "USA"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "This is the route we took to get from ATL to NY!"],
+			},
+					
+			"asset4": {
+				"jtitle": ["Title:", "Great Memory :-)"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "USA"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "We made it to NY! I love the Rockefeller Center!"],
+			},			
+			
+			"asset5": {
+				"jtitle": ["Title:", "Queenstown!!"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "New Zealand"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "We fell in love with this place.  So beautiful!"],
+			},	
+			
+			"asset6": {
+				"jtitle": ["Title:", "Candy Store"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "New Zealand"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "We found some yummy candy here.  Biggest candy store since NY!"],
+			},
+			
+			"asset7": {
+				"jtitle": ["Title:", "NZ!"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "New Zealand"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "Heres where we stayed, mostly."],
+			},	
+			
+			"asset8": {
+				"jtitle": ["Title:", "Cool Tower"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "New Zealand"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "Auckland!"],
+			},
+					
+			"asset9": {
+				"jtitle": ["Title:", "Chichen Itza"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "Mexico"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "Breathtaking!"],
+			},
+						
+			"asset10": {
+				"jtitle": ["Title:", "Our Market Trip"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "Mexico"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "Some yummies that we bought!"],
+			},	
+			
+			"asset11": {
+				"jtitle": ["Title:", "Monterrey"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "Mexico"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "Where we stayed for 2 nights!"],
+			},
+			
+			"asset12": {
+				"jtitle": ["Title:", "Beach"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "Mexico"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "Love!"],
+			},
+						
+			"asset13": {
+				"jtitle": ["Title:", "Hotel"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "Europe"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "We were in the city too much, so I decided to put this here :-)"],
+			},
+			
+			"asset14": {
+				"jtitle": ["Title:", "Market"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "Europe"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "Yummy veggies at the local market!"],
+			},
+						
+			"asset15": {
+				"jtitle": ["Title:", "Trip"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "Europe"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "The trip from Munich to Rome that we traveled.  Amazing!"],
+			},
+						
+			"asset16": {
+				"jtitle": ["Title:", "The Rome Theatre"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "Europe"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "Beautiful!"],
+			},
+						
+			"asset17": {
+				"jtitle": ["Title:", "Tokyo"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "Japan"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "Tokyo from up high!"],
+			},	
+			
+			"asset18": {
+				"jtitle": ["Title:", "Noodles"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "Japan"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "My fav dish there!"],
+			},
+						
+			"asset19": {
+				"jtitle": ["Title:", "Landing"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "Japan"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "Our flight landed in Osaka."],
+			},
+								
+			"asset20": {
+				"jtitle": ["Title:", "Mt. Fuji!!!!"]
+				"jdate": ["Date Added:", "2011-12-15"],
+				"groups": ["Category:", "Japan"],
+				"rating": ["Rating:", "9"],
+				"notes": ["Notes :: Stories", "This was such a sight to see.  We loved all the mountains we found while traveling!"],
+			}			
+		};
 		
-		"asset2": {
-			"title": ["Title:", "On the way to Washington, DC"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Images"],
-			"epic": ["Epic Moment:", "No"],
-			"rating": ["Stars:", "1"],
-			"notes": ["Notes :: Stories", "The sunset was beautiful today!"],
-		},
-		
-		"asset3": {
-			"title": ["Title:", "On the way to Washington, DC"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Images"],
-			"epic": ["Epic Moment:", "Yes"],
-			"rating": ["Stars:", "1"],
-			"notes": ["Notes :: Stories", "beautiful"],
-		},
-		
-		"asset4": {
-			"title": ["Title:", "On the way to Washington, DC"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Images"],
-			"epic": ["Epic Moment:", "Yes"],
-			"rating": ["Stars:", "1"],
-			"notes": ["Notes :: Stories", "happy place!"],
-		},
-		
-		"asset5": {
-			"title": ["Title:", "Tim is hilarious."]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Images"],
-			"epic": ["Epic Moment:", "Yes"],
-			"rating": ["Stars:", "4"],
-			"notes": ["Notes :: Stories", "Tim making bird noises while driving"],
-		},
-		
-		"asset6": {
-			"title": ["Title:", "On the way to Washington, DC"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Videos"],
-			"epic": ["Epic Moment:", "No"],
-			"rating": ["Stars:", "1"],
-			"notes": ["Notes :: Stories", "We found the best Dine & Dash ever!"],
-		},
-		
-		"asset7": {
-			"title": ["Title:", "On the way to Washington, DC"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Videos"],
-			"epic": ["Epic Moment:", "Yes"],
-			"rating": ["Stars:", "5"],
-			"notes": ["Notes :: Stories", "I thought we were going to get chased by the cops!"],
-		},
-		
-		"asset8": {
-			"title": ["Title:", "On the way to Washington, DC"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Videos"],
-			"epic": ["Epic Moment:", "Yes"],
-			"rating": ["Stars:", "5"],
-			"notes": ["Notes :: Stories", "You will only make this mistake once in your life (hopefully)."],
-		},
-		
-		"asset9": {
-			"title": ["Title:", "On the way to Washington, DC"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Videos"],
-			"epic": ["Epic Moment:", "Yes"],
-			"rating": ["Stars:", "1"],
-			"notes": ["Notes :: Stories", "This is when Tim fell into the river!"],
-		},
-		
-		"asset10": {
-			"title": ["Title:", "On the way to Washington, DC"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Videos"],
-			"epic": ["Epic Moment:", "No"],
-			"rating": ["Stars:", "3"],
-			"notes": ["Notes :: Stories", "Here we are dancing and singing our favorite R.E.M. songs!"],
-		},
-		
-		"asset11": {
-			"title": ["Title:", "On the way to Washington, DC"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Maps :: Routes"],
-			"epic": ["Epic Moment:", "No"],
-			"rating": ["Stars:", "1"],
-			"notes": ["Notes :: Stories", "A backroad we found."],
-		},
-		
-		"asset12": {
-			"title": ["Title:", "On the way to Washington, DC"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Maps :: Routes"],
-			"epic": ["Epic Moment:", "No"],
-			"rating": ["Stars:", "1"],
-			"notes": ["Notes :: Stories", "This was the prettiest patch of woods ever!"],
-		},
-		
-		"asset13": {
-			"title": ["Title:", "On the way to Washington, DC"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Maps :: Routes"],
-			"epic": ["Epic Moment:", "No"],
-			"rating": ["Stars:", "1"],
-			"notes": ["Notes :: Stories", "I was so bored on this road"],
-		},
-		
-		"asset14": {
-			"title": ["Title:", "On the way to Washington, DC"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Maps :: Routes"],
-			"epic": ["Epic Moment:", "Yes"],
-			"rating": ["Stars:", "1"],
-			"notes": ["Notes :: Stories", "Never, ever, ever get on this interste @ 5pm"],
-		},
-		
-		"asset15": {
-			"title": ["Title:", "On the way to Washington, DC"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Maps :: Routes"],
-			"epic": ["Epic Moment:", "No"],
-			"rating": ["Stars:", "1"],
-			"notes": ["Notes :: Stories", "We found a backroad to our hotel here."],
-		},
-		
-		"asset16": {
-			"title": ["Title:", "On the way to Washington, DC"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Favorite Places"],
-			"epic": ["Epic Moment:", "Yes"],
-			"rating": ["Stars:", "1"],
-			"notes": ["Notes :: Stories", "Waffle House, Atlanta, GA"],
-		},
-		
-		"asset17": {
-			"title": ["Title:", "On the way to Washington, DC"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Favorite Places"],
-			"epic": ["Epic Moment:", "No"],
-			"rating": ["Stars:", "1"],
-			"notes": ["Notes :: Stories", "Charlotte, NC"],
-		},
-		
-		"asset18": {
-			"title": ["Title:", "On the way to Washington, DC"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Favorite Places"],
-			"epic": ["Epic Moment:", "Yes"],
-			"rating": ["Stars:", "1"],
-			"notes": ["Notes :: Stories", "A cool coffee shop; Boone, NC"],
-		},
-		
-		"asset19": {
-			"title": ["Title:", "On the way to Washington, DC"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Favorite Places"],
-			"epic": ["Epic Moment:", "No"],
-			"rating": ["Stars:", "1"],
-			"notes": ["Notes :: Stories", "Coolest Hotel 6, Richmon, VA"],
-		},
-		
-		"asset20": {
-			"title": ["Title:", "On the way to Washington, DC"]
-			"date": ["Date Added:", "2011-12-15"],
-			"category": ["Category:", "Favorite Places"],
-			"epic": ["Epic Moment:", "No"],
-			"rating": ["Stars:", "3"],
-			"notes": ["Notes :: Stories", "We made it to our hotel; Washington, DC"],
-		}
-};
+	//Store the JSON object into Local Storage
+	for (var n in json){
+		var id = Math.floor(Math.random() * 100000001);
+		localStorage.setItem(id, JSON.stringify(json[n]));
+	}
+}
