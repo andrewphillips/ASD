@@ -1,134 +1,7 @@
-/* <!-- ASD 1206 Project 1 -->
-
-
-/* body, html {
-	height: 100%;
-}
-
-body {
-	font: 16px Helvetica, Sans-serif;
-	color: #ffffff;
-	/* background: url(../images/concrete9_small.jpg); 
-}
-
-#description p {
-	margin: 0 0 0 10px;
-	padding: 10px 20px 20px;
-	background: #333;
-	-moz-border-radius: 10px; 
-	border-radius: 10px;
-	color: #fff;
-}
-
-#construction p {
-	margin: 0 0 0 10px;
-	padding: 10px 20px 20px;
-	background: #333;
-	-moz-border-radius: 10px; 
-	border-radius: 10px;
-	color: #fff;
-}
-
-ul{
-	list-style:none;
-}
-
-li{
-	padding: 0 0 5px;
-}
-
-form{
-	padding: 10px;
-	background: none;
-	-moz-border-radius: 10px;
-	-webkit-appearance: none; 
-	color: white;
-	font-size: 18px;
-}
-
-fieldset{
-	border: none;
-}
-
-header h1{
-	margin-left: 5px;
-	text-indent: -99999px;
-	color: #fff;
-	padding-top: 10px;
-	width: 270px;
-	height: 100px;
-	background: url(../images/journeys_main.png) no-repeat top left;
-}
-
-header p{
-	font-size: 18px;
-	padding: 0;
-	margin: auto;
-}
-
-#items a {
-	text-decoration: none;
-	color: #fff;
-	background: #ff352f;
-	padding: 5px;
-	-moz-border-radius: 5px; 
-	border-radius: 5px;
-	text-align: center;
-	display: block;
-	width: 130px;
-}
-
-#container{
-	margin: 0 0 0 10px;
-	padding: 10px 20px 20px;
-    /* background: #2e2e2e; 
-	-moz-border-radius: 10px; 
-	border-radius: 10px;
-	color: black;
-}
-
-#content {
-	/* background: #bac4d3; 
-	padding: 5px
-}
-
-#browse {
-	margin: 0 0 0 10px;
-	padding: 10px 20px 20px;
-	/* background: #2e2e2e; 
-	background: #333;
-	-moz-border-radius: 10px; 
-	border-radius: 10px;
-	color: #fff;
-}
-
-#browsecat {
-	padding: 5px 10px;
-	/* background: #ff352f; 
-	background: #ff352f;
-	color: #fff;
-	border: 0;
-	font-size: 18px;
-	-moz-border-radius: 5px; 
-	border-radius: 5px;
-	margin: 0;
-	text-transform: uppercase;
-	text-decoration: none;
-	line-height: 55px;
-	
-}
-
-#centerstage {
-	margin: auto;
-	color: #fff;
-	padding-top: 5px;
-	padding-bottom: 50px;
-	width: 285px;
-	height: 80px;
-}
-/*.ui-btn-up-b {
-	background: #ff352f !important;
-} */
+/*
+Andrew Phillips
+ASD 1206 Project 1
+*/
 
 body,html{
 	height: 100%;
@@ -216,7 +89,7 @@ header p{
     background: #969696;
 }
 
-#viewall{
+#construction{
 	background: #455e9a;
 	color: white;
 }
@@ -239,6 +112,33 @@ label.error{
 	background-color: #464646;
 	color: black;
 	margin-left: 8px;
+}
+/*#scrapbookForm{
+	margin: 0 0 0 10px;
+	padding: 10px 20px 20px;
+	background: #fff; 	
+	-moz-border-radius: 10px; 
+	border-radius: 10px;
+	-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+}*/
+
+#container{
+	margin: 0 0 0 10px;
+	padding: 10px 20px 20px;
+	background: #fff; 	
+	-moz-border-radius: 10px; 
+	border-radius: 10px;
+	-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+}
+#container p{
+	font-size: 22px;
+	padding: 0;
+	margin: 0 0 20px;
+	text-align: center;
 }
 
 

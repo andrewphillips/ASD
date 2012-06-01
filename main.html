@@ -4,20 +4,20 @@
 
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Journeys - Adventure Scrapbook</title>
-<!--  Mobile viewport optimized: j.mp/bplateviewport -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Mobile IE needs ClearType for smoothing fonts -->
-<meta http-equsaFavoritev="cleartype" content="on">
-<!-- StyleSheets under here -->
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
-<link rel="stylesheet" href="css/ps/jquery-mobile.css"/>
-<link rel="stylesheet" href="css/style.css" type="text/css" />
-<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
-<script src="js/libs/modernizr.custom.min.js"></script>
+	<meta charset="utf-8"/>
+	<title>Journeys - Adventure Scrapbook</title>
+	<!--<meta name="robots" content="index, follow"/> -->
+	<!--Mobile Viewport Optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+	<meta name="MobileOptimized" content="320" />
+	<meta name="HandheldFriendly" content="true" />
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<!-- JavaScript Modernizr allows some HTML5 features -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
 </head>
 <body>
 <div data-role="page" id="home">
@@ -32,143 +32,26 @@
 		</p>	
 		</header>
 		<div id="cta1">
-			<a href="#addscrapbook"><img src="images/add_new.png" alt="add journey"/></a>
+			<a href="additem.html"><img src="images/add_new.png" alt="add journey"/></a>
 		</div>
-		
-
-	
+	<!-- Not really much content in week 1 - just getting it working and prepped to look amazing -->	
 	<!-- /content -->
 	<div data-role="footer" data-theme="c" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
-				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="main.html" data-icon="home">Home</a></li>
 				<li><a href="#" id="displayLink" data-icon="search">List</a></li>
-<!--				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>  -->
-				<!-- 				<li><a href="#addscrapbook" onclick="location.reload();" data-icon="plus">Add New</a></li> -->
-				<li><a href="additem.html" data-icon="plus">Add New</a></li>			</ul>
+				<li><a href="additem.html" data-icon="plus">Add New</a></li>	
+			</ul>
 		</div>
 	</div>
 	<!-- /footer -->
 </div>
-<!-- /page -->
-
-
-<!-- /page addscrapbook -->
-<div data-role="page" id="addscrapbook">
-	<div data-role="header" data-theme="c" id="headother">
-		<h1 id="headnothome">Journeys</h1>
-	</div>
-	<!-- /header -->
-	<div data-role="content" class="content">
-
-		<form action="" method="post" id="scrapbookForm" name="scrapbookForm">
-		
-			<div data-role="fieldcontain" id="scrapbookName">
-				<label for="jtitle">Title</label>
-				<input name="jtitle" type="text" id="jtitle" class="required" />
-<!--				<small class="prompt">Name Me!</small> -->
-			</div>
-			<div data-role="fieldcontain" id="scrapbookDate">
-				<label for="jdate">Journey Date</label>
-				<input name="jdate" type="date" id="jdate" class="date required"/>
-<!--				<small class="prompt">MM/DD/YYYY</small> -->
-			</div>
-			<div data-role="fieldcontain" id="addMedia">
-				<a href="construction.html" type="submit" value="Add Media" data-theme="a" data-iconpos="top" data-icon="star" data-corners="false">Add Media</a>
-
-			<!--	<input id="addMedia" type="button" value="Add Media" data-iconpos="top" data-icon="star" data-theme="a" data-corners="false"/> -->
-			</div>
-
-			<div data-role="fieldcontain" id="scrapbookGroup"><!-- select -->
-				<label for="category">Country</label>
-				<select id="groups" name="groups" data-native-menu="false">
-					<option data-placeholder="true">Choose your Region</option>
-					<option value="USA">USA</option>
-					<option value="New Zealand">New Zealand</option>
-					<option value="Mexico">Mexico</option>
-					<option value="Europe">Europe</option>
-					<option value="Japan">Japan</option>
-				</select>
-			</div>
-<!--			<div data-role="fieldcontain" id="scrapbookSubGroup">
-				<label for="subcategory">Category</label>
-				<select id="subgroups" name="subgroups" data-native-menu="false">
-					<option data-placeholder="true">Choose Category</option>
-					<option value="usaLands">USA | Landscapes</option>
-					<option value="usaFood">USA | Food</option>
-					<option value="usaMaps">USA | Maps :: Routes</option>
-					<option value="usaFavorite">USA | Favorites</option>
-					<option value="nzLand">New Zealand | Landscapes</option>
-					<option value="nzFood">New Zealand | Food</option>
-					<option value="nzMaps">New Zealand | Maps :: Routes</option>
-					<option value="nzFavorite">New Zealand | Favorites</option>
-					<option value="mexicoLand">Mexico | Landscapes</option>
-					<option value="mexicoFood">Mexico | Food</option>
-					<option value="mexicoMaps">Mexico | Maps :: Routes</option>
-					<option value="mexicoFavorite">Mexico | Favorites</option>
-					<option value="europeLand">Europe | Landscapes</option>
-					<option value="europeFood">Europe | Food</option>
-					<option value="europeMaps">Europe | Maps :: Routes</option>
-					<option value="europeFavorite">Europe | Favorites</option>
-					<option value="japanLand">Japan | Landscapes</option>
-					<option value="japanFood">Japan | Food</option>
-					<option value="japanMaps">Japan | Maps</option>
-					<option value="japanFavorite">Japan | Favorites</option>
-				</select>
-			</div> -->
-
-<!-- -->			<div data-role="fieldcontain" id="scrapbookRating">
-				<label for="jrating">Rating</label>
-				<input name="jrating" type="range" min="0" max="10" step="1" value="7" id="jrating"/>
-			</div>
-			<div data-role="fieldcontain" id="scrapbookNotes">
-				<label for="notes">Notes :: Stories</label><br />
-				<textarea id="notes"></textarea>
-			</div>
-
-			<div data-role="fieldcontain">
-				<input id="submit" type="submit" value="Save Journey" data-theme="a" />
-			</div>
-			<div data-role="fieldcontain" id="reset" >
-				<input type="reset" value="Clear All" data-theme="c" />
-			</div>
-		</form>
-		
-		
-		<div id="clearlocal">
-			<p id="clear"><a href="#" onclick="clearLocal(); location.reload();">Clear Local Storage</a>
-			</p>
-		</div>
-
-	</div>
-	
-	
-	
-	
-
-	<!-- /content -->
-	<!--
-<div data-role="footer" data-theme="c" data-position="fixed">
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#home" data-icon="home">Home</a></li>
-				<li><a href="#" id="displayLink" data-icon="search">List</a></li>
--->
-<!--				<li><a href="#browsegal" data-icon="grid">Gallery</a></li>  -->
-				<!--
-<li><a href="additem.html" data-icon="plus">Add New</a></li>
-			</ul>
-		</div>
-	</div>
--->
-	<!-- /footer -->
-<!-- </div> -->
-<!-- /page addscrapbook -->
-
+<!-- /page main.html-->
 
 <!-- JavaScript under here -->
-<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
 <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/JSON.js"></script>
 <script type="text/javascript" src="js/main.js"></script>

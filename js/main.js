@@ -49,9 +49,9 @@ $('#displayLink').live('click', function getData() {
             'class': 'listDiv'
         }).appendTo('#list');
         $('<h3>').html(value[0]).appendTo('.listDiv');
-        $('<img>').attr({
-            'src': value[1],
-            'width': '300'
+       	$('<img>').attr({
+       	   'src': value[1],
+           'width': '300'
         }).appendTo('.listDiv');
         $('<p>').html('Date: ' + value[2]).appendTo('.listDiv');
         $('<p>').html('Region: ' + value[3]).appendTo('.listDiv');
@@ -138,23 +138,21 @@ function clearLocal() {
         return false;
     }
 }
-		
-// Validation from Week 3 in MiU
 
-		
- $("#scrapbookForm").validate({
+
+$("#scrapbookForm").validate({
     submitHandler: function(form) {
         console.log("Call Action");
     }
 });
 
+/*
+
 window.onload = function() {
   applyDefaultplaceholder(document.getElementById('jtitle'), 'Enter a Title');
   applyDefaultplaceholder(document.getElementById('category'), 'Select a Country');
-
-  
 }
-
+*/
 
 function applyDefaultplaceholder(elem, val) {
   elem.style.color = '#999';
@@ -172,6 +170,9 @@ function applyDefaultplaceholder(elem, val) {
     }
   }
 }
+
+
+
 
 $(document).ready( function() {
     var now = new Date();

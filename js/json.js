@@ -169,5 +169,4 @@ function autoFillData(){
 	for (var n in json){
 		var id = Math.floor(Math.random() * 100000001);
 		localStorage.setItem(id, JSON.stringify(json[n]));
-	}
-}
+
