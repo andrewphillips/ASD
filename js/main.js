@@ -146,13 +146,13 @@ $("#scrapbookForm").validate({
     }
 });
 
-/*
 
+/*
 window.onload = function() {
   applyDefaultplaceholder(document.getElementById('jtitle'), 'Enter a Title');
   applyDefaultplaceholder(document.getElementById('category'), 'Select a Country');
 }
-*/
+
 
 function applyDefaultplaceholder(elem, val) {
   elem.style.color = '#999';
@@ -172,13 +172,11 @@ function applyDefaultplaceholder(elem, val) {
 }
 
 
-
-
 $(document).ready( function() {
     var now = new Date();
     var today = now.getMonth() + '/' + now.getDate() + '/' + now.getFullYear();
     $('#jdate').val(today);
-    
+ */   
 
     
 });
