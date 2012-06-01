@@ -148,7 +148,6 @@ $("#scrapbookForm").validate({
 
 
 /*
-
 $(document).ready( function() {
     var now = new Date();
     var today = now.getMonth() + '/' + now.getDate() + '/' + now.getFullYear();
