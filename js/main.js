@@ -148,29 +148,6 @@ $("#scrapbookForm").validate({
 
 
 /*
-window.onload = function() {
-  applyDefaultplaceholder(document.getElementById('jtitle'), 'Enter a Title');
-  applyDefaultplaceholder(document.getElementById('category'), 'Select a Country');
-}
-
-
-function applyDefaultplaceholder(elem, val) {
-  elem.style.color = '#999';
-  elem.placeholder = val;
-  elem.onfocus = function() {
-    if(this.placeholder == val) {
-      this.style.color = '';
-      this.placeholder = '';
-    }
-  }
-  elem.onblur = function() {
-    if(this.placeholder == '') {
-      this.style.color = '#999';
-      this.placeholder = val;
-    }
-  }
-}
-
 
 $(document).ready( function() {
     var now = new Date();
