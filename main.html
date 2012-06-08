@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- Andrew Phillips -->
+<!-- ASD 1206 Project 1 -->
+
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Journeys - Adventure Scrapbook</title>
+	<!--<meta name="robots" content="index, follow"/> -->
+	<!--Mobile Viewport Optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+	<meta name="MobileOptimized" content="320" />
+	<meta name="HandheldFriendly" content="true" />
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<!-- JavaScript Modernizr allows some HTML5 features -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="home">
+	<div data-role="header" data-theme="c" id="homehead">
+		<h1 id="headerh1">Journeys</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content" id="one">
+		<header>
+		<p>
+			Capture all your travel adventures with this handy app!
+		</p>	
+		</header>
+		<div id="cta1">
+			<a href="#additem"><img src="images/add_new.png" alt="add journey"/></a>
+		</div>
+
+		<div id="getdata" data-role="fieldcontain">
+				<div id="get-buttons">
+					<div class="ui-grid-b">
+						<p style="text-align: center;">Import Data!</p>
+						<div class="ui-block-a">
+							<a href="#" data-role="button" data-theme="b" id="myjsonbutton">JSON</a>
+						</div>
+					
+						<div class="ui-block-b">
+							<a href="#" data-role="button" data-theme="b" id="myxmlbutton">XML</a>
+						</div>
+						
+						<div class="ui-block-c">
+							<a href="#" data-role="button" data-theme="b" id="mycsvbutton">CSV</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#" id="displayLink" data-icon="search">List</a></li>
+				<li><a href="#additem" data-icon="plus">Add New</a></li>	
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page home-->
+
+
+
+<div data-role="page" id="additem">
+	<div data-role="header" data-theme="c" id="homehead">
+		<h1 id="headerh1">Journeys</h1>
+	</div>
+	<!--/header-->
+	<div data-role="content" class="content">
+
+		<form action="" method="post" id="scrapbookForm" name="scrapbookForm">
+		
+			<div data-role="fieldcontain" id="scrapbookName">
+				<label for="jtitle">Title</label>
+				<input name="jtitle" type="text" id="jtitle" class="required" />
+<!--				<small class="prompt">Name Me!</small> -->
+			</div>
+			<div data-role="fieldcontain" id="scrapbookDate">
+				<label for="jdate">Journey Date</label>
+				<input name="jdate" type="date" id="jdate" class="date required"/>
+<!--				<small class="prompt">MM/DD/YYYY</small> -->
+			</div>
+			<div data-role="fieldcontain" id="addMedia">
+				<a href="#construction" type="submit" value="Add Media" data-theme="a" data-iconpos="top" data-icon="star" data-corners="false">Add Photo/Video</a>
+			</div>
+
+			<div data-role="fieldcontain" id="scrapbookGroup"><!-- select -->
+				<label for="category">Country</label>
+				<select id="groups" name="groups" data-native-menu="false">
+					<option data-placeholder="true">Choose your Region</option>
+					<option value="USA">USA</option>
+					<option value="New Zealand">New Zealand</option>
+					<option value="Mexico">Mexico</option>
+					<option value="Europe">Europe</option>
+					<option value="Japan">Japan</option>
+				</select>
+			</div>
+		<div data-role="fieldcontain" id="scrapbookRating">
+				<label for="rating">Rating</label>
+				<input name="rating" type="range" min="0" max="10" step="1" value="7" id="rating"/>
+			</div>
+			<div data-role="fieldcontain" id="scrapbookNotes">
+				<label for="notes">Notes :: Stories</label><br />
+				<textarea id="notes"></textarea>
+			</div>
+
+			<div data-role="fieldcontain">
+				<input id="submit" type="submit" value="Save Journey" data-theme="a" />
+			</div>
+			<div data-role="fieldcontain" id="reset" >
+				<input type="reset" value="Clear All" data-theme="c" />
+			</div>
+		</form>
+		
+		
+		<div id="clearlocal">
+			<p id="clear"><a href="#" onclick="clearLocal(); location.reload();">Clear Local Storage</a>
+			</p>
+		</div>
+
+	</div>
+
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#" id="displayLink" data-icon="search">List</a></li>
+				<li><a href="#additem" data-icon="plus">Add New</a></li>	
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page additem -->
+
+
+
+<div data-role="page" id="construction">
+	<div data-role="header" data-theme="c" id="homehead">
+		<h1 id="headerh1">Journeys</h1>
+	</div>
+	<!-- /header -->
+			<div data-role="content" class="content">
+				<p>This media system is under construction.  Check back soon!!</p>
+			</div>
+	
+		<div data-role="navbar">
+			<a href="#additem" id="backScrapbook" type="submit" value="Back to Scrapbook" data-theme="b" data-icon="back" iconpos="right">Back to Scrapbook</a>
+		</div>		
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#" id="displayLink" data-icon="search">List</a></li>
+				<li><a href="#additem" data-icon="plus">Add New</a></li>	
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page construction -->
+
+
+<!-- JavaScript under here -->
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/JSON.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script>getData();</script>
+</body>
+</html>
