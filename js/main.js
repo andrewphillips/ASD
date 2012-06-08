@@ -1,5 +1,5 @@
-// <!-- ASD 1206 Project 1 -->
-
+// <!-- ASD 1206 Project 2 -->
+//Yes, I still need to change this over to pageInIt---I will get there….(and update to the newer jQuery)
 
 // Save data!!
 
@@ -148,13 +148,119 @@ $("#scrapbookForm").validate({
 
 
 /*
-
 $(document).ready( function() {
     var now = new Date();
     var today = now.getMonth() + '/' + now.getDate() + '/' + now.getFullYear();
     $('#jdate').val(today);
- */   
+ */      
+//});
+//$.mobile.selectmenu.prototype.options.hidePlaceholderMenuItems = false;
 
-    
+
+
+
+
+// Load data from outside this app 
+
+// JSON  
+$('#myjsonbutton').bind('click', function(){
+	$('#scrapbookdata').empty();
+	$('<p>').html('IMPORT JSON ').appendTo('#scrapbookdata');
+	$.ajax({
+		url: 'xhr/data.json',
+		dataType: 'json',
+		type: 'GET',
+		success: function(response){
+        	for (var i=0, j=response.myscrapbook.length; i<j; i++){
+				var jdata = response.myscrapbook[i];
+				$(''+
+					'<div class="scrapbooktitle">'+
+						'<h3>'+ jdata.jtitle +'</h3>'+
+						'<p>Date Added: '+ jdata.jdate +'</p>'+
+						'<p>Category: '+ jdata.groups +'</p>'+
+						'<p>Rating: '+ jdata.rating +'</p>'+
+						'<p>Notes: '+ jdata.notes +'</p>'+
+					'</div>'
+				).appendTo('#scrapbookdata');
+				console.log(response);
+			}
+		}
+	});
+	return false;
 });
-$.mobile.selectmenu.prototype.options.hidePlaceholderMenuItems = false;
+
+// XML 
+$('#myxmlbutton').bind('click', function(){
+	$('#scrapbookdata').empty();
+	$('<p>').html('IMPORT XML').appendTo('#scrapbookdata');
+	$.ajax({
+		url: 'xhr/data.xml',
+		dataType: 'xml',
+		type: 'GET',
+		success: function(xml){
+			$(xml).find("scrapbookframe").each(function(){
+   				var jtitle = $(this).find('jtitle').text();
+   				var jdate = $(this).find('jdate').text();
+   				var groups = $(this).find('groups').text();
+   				var rating = $(this).find('rating').text();
+   				var notes = $(this).find('notes').text();
+				$(''+
+					'<div class="scrapbooktitle">'+
+						'<h3>'+ jtitle +'</h3>'+
+						'<p>Date Added: '+ jdate +'</p>'+
+						'<p>Category: '+ groups +'</p>'+
+						'<p>Rating: '+ rating +'</p>'+
+						'<p>Notes: '+ notes +'</p>'+
+					'</div>'
+				).appendTo('#scrapbookdata');
+				console.log(xml);
+			});
+		}
+	});
+	return false;
+});
+
+
+//CSV 
+$('#mycsvbutton').bind('click', function(){
+	$('#scrapbookdata').empty();
+	$('<p>').html('IMPORT CSV').appendTo('#scrapbookdata');
+	 $.ajax({
+        type: "GET",
+        url: "xhr/data.csv",
+        dataType: "text",
+        success: function(data) {
+        	var textLines = data.split(/\r\n|\n/);
+    		var headers = textLines[0].split(',');
+    		var lines = []; 
+
+			for (var i=1; i<textLines.length; i++) {
+				var data = textLines[i].split(',');
+				if (data.length == headers.length) {
+					var scrapbook = []; 
+					
+					for (var j=0; j<headers.length; j++) {
+						scrapbook.push(data[j]); 
+					}
+					lines.push(scrapbook); 
+				}
+				
+			}
+			
+			for (var m=0; m<lines.length; m++){
+				var thisScrapbook = lines[m];
+			$(''+
+					'<div class="scrapbooktitle">'+
+						'<h3>'+ thisScrapbook[0] +'</h3>'+
+						'<p>Date Added: '+ thisScrapbook[2] +'</p>'+
+						'<p>Category: '+ thisScrapbook[3] +'</p>'+
+						'<p>Rating: '+ thisScrapbook[5] +'</p>'+
+						'<p>Notes: '+ thisScrapbook[6] +'</p>'+
+					'</div>'
+				).appendTo('#scrapbookdata');
+			console.log(lines);	
+			}
+        }
+	});
+	return false;
+});
