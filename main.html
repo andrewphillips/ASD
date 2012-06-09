@@ -36,30 +36,31 @@
 		</div>
 
 		<div id="getdata" data-role="fieldcontain">
-				<div id="get-buttons">
-					<div class="ui-grid-b">
-						<p style="text-align: center;">Import Data!</p>
-						<div class="ui-block-a">
+			<div id="get-buttons">
+				<div class="ui-grid-b">
+					<p style="text-align: center;">Import Data!</p>
+					<div class="ui-block-a">
 							<a href="#" data-role="button" data-theme="b" id="myjsonbutton">JSON</a>
-						</div>
+					</div>
 					
-						<div class="ui-block-b">
+					<div class="ui-block-b">
 							<a href="#" data-role="button" data-theme="b" id="myxmlbutton">XML</a>
-						</div>
+					</div>
 						
-						<div class="ui-block-c">
+					<div class="ui-block-c">
 							<a href="#" data-role="button" data-theme="b" id="mycsvbutton">CSV</a>
-						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
 
 	<!-- /content -->
 	<div data-role="footer" data-theme="c" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#home" data-icon="home">Home</a></li>
-				<li><a href="#" id="displayLink" data-icon="search">List</a></li>
+				<li><a href="#" class="displayLink" data-icon="search">List</a></li>
 				<li><a href="#additem" data-icon="plus">Add New</a></li>	
 			</ul>
 		</div>
@@ -71,13 +72,13 @@
 
 
 <div data-role="page" id="additem">
-	<div data-role="header" data-theme="c" id="homehead">
-		<h1 id="headerh1">Journeys</h1>
+	<div data-role="header" data-theme="c" id="listhead" class="homehead">
+		<h1 id="headerItem">Journeys</h1>
 	</div>
 	<!--/header-->
 	<div data-role="content" class="content">
 
-		<form action="" method="post" id="scrapbookForm" name="scrapbookForm">
+		<form action="#" method="post" id="scrapbookForm" name="scrapbookForm">
 		
 			<div data-role="fieldcontain" id="scrapbookName">
 				<label for="jtitle">Title</label>
@@ -90,11 +91,11 @@
 <!--				<small class="prompt">MM/DD/YYYY</small> -->
 			</div>
 			<div data-role="fieldcontain" id="addMedia">
-				<a href="#construction" type="submit" value="Add Media" data-theme="a" data-iconpos="top" data-icon="star" data-corners="false">Add Photo/Video</a>
+				<a href="#construction" data-theme="a" data-iconpos="top" data-icon="star" data-corners="false">Add Photo/Video</a>
 			</div>
 
 			<div data-role="fieldcontain" id="scrapbookGroup"><!-- select -->
-				<label for="category">Country</label>
+				<label for="groups">Country</label>
 				<select id="groups" name="groups" data-native-menu="false">
 					<option data-placeholder="true">Choose your Region</option>
 					<option value="USA">USA</option>
@@ -104,7 +105,7 @@
 					<option value="Japan">Japan</option>
 				</select>
 			</div>
-		<div data-role="fieldcontain" id="scrapbookRating">
+			<div data-role="fieldcontain" id="scrapbookRating">
 				<label for="rating">Rating</label>
 				<input name="rating" type="range" min="0" max="10" step="1" value="7" id="rating"/>
 			</div>
@@ -134,7 +135,7 @@
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#home" data-icon="home">Home</a></li>
-				<li><a href="#" id="displayLink" data-icon="search">List</a></li>
+				<li><a href="#" class="displayLink" data-icon="search">List</a></li>
 				<li><a href="#additem" data-icon="plus">Add New</a></li>	
 			</ul>
 		</div>
@@ -146,7 +147,7 @@
 
 
 <div data-role="page" id="construction">
-	<div data-role="header" data-theme="c" id="homehead">
+	<div data-role="header" data-theme="c" id="constructhead" class="homehead">
 		<h1 id="headerh1">Journeys</h1>
 	</div>
 	<!-- /header -->
@@ -155,13 +156,13 @@
 			</div>
 	
 		<div data-role="navbar">
-			<a href="#additem" id="backScrapbook" type="submit" value="Back to Scrapbook" data-theme="b" data-icon="back" iconpos="right">Back to Scrapbook</a>
+			<a href="#additem" id="backScrapbook" data-theme="b" data-icon="back" >Back to Scrapbook</a>
 		</div>		
 	<div data-role="footer" data-theme="c" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#home" data-icon="home">Home</a></li>
-				<li><a href="#" id="displayLink" data-icon="search">List</a></li>
+				<li><a href="#" class="displayLink" data-icon="search">List</a></li>
 				<li><a href="#additem" data-icon="plus">Add New</a></li>	
 			</ul>
 		</div>
@@ -175,8 +176,6 @@
 <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
 <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
-<script type="text/javascript" src="js/JSON.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<script>getData();</script>
 </body>
 </html>
