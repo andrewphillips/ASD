@@ -1,9 +1,22 @@
 // <!-- ASD 1206 Project 2 -->
 //Yes, I still need to change  over to pageInIt---I will get there….(and update to the newer jQuery)--I did not get all things fixed from last week like I thought I would.
 
-// Save data!!
 
-$('#submit').live('click', function saveData(id) {
+$(document).ready(function() {
+
+
+
+function autoFillData(){
+
+	//Store the JSON object into Local Storage
+	for (var n in json){
+		var id = Math.floor(Math.random() * 100000001);
+		localStorage.setItem(id, JSON.stringify(json[n]));
+	}
+    }
+    
+    
+function saveData(id) {
     var d = new Date();
     var key = (d.getTime());
     var jtitle = $("#jtitle").val();
@@ -17,7 +30,8 @@ $('#submit').live('click', function saveData(id) {
     localStorage.setItem(key, item);
     location.reload();
     alert("Saved to Scrapbook!");
-});	
+}
+
 
 function toggleControls(n) {
     switch (n) {
@@ -35,11 +49,10 @@ function toggleControls(n) {
     }
 }
 
-// GET Data
-
-$('#displayLink').live('click', function getData() {
+function getData() {
 	toggleControls("on");
     var getListdiv = $('#list')[0];
+    
     for (var i = 0, j = localStorage.length; i < j; i++) {
         var key = localStorage.key(i);
         var value = localStorage.getItem(key);
@@ -67,11 +80,10 @@ $('#displayLink').live('click', function getData() {
         }).html('Edit Entry')).appendTo('.listDiv');
 
     }
-});
+};
 
 
 // EDIT 
-
 function editItem(id) {
     var itemId = id;
 	var value = localStorage.getItem(itemId);
@@ -114,7 +126,6 @@ function editItem(id) {
 
 
 // DELETE  
-
 function deleteItem(id) {
     var ask = confirm("Are you sure you want to remove this from your collection?");
     if (ask) {
@@ -127,7 +138,6 @@ function deleteItem(id) {
 
 
 // CLEAR
-
 function clearLocal() {
     if (localStorage.length === 0) {
         alert("There is no data to clear.");
@@ -139,12 +149,17 @@ function clearLocal() {
     }
 }
 
+// VALIDATE
+function validate() {
 
 $("#scrapbookForm").validate({
-    submitHandler: function(form) {
+    invalidHandler: function(form, validator) {},
+    submitHandler: function(){
+	saveData();
         console.log("Call Action");
     }
 });
+}
 
 
 /*
@@ -263,4 +278,15 @@ $('#mycsvbutton').bind('click', function(){
         }
 	});
 	return false;
+});
+
+var json;
+
+// Save data!!
+$('#submit').live('click', validate);
+
+// GET Data
+$('.displayLink').live('click', getData);
+
+
 });
