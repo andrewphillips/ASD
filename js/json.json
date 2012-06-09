@@ -3,7 +3,7 @@
 // Default Data
 
 
-	{
+var json =	{
 			"asset1": {
 				"jtitle": ["Title:", "East Coast View"],
 				"jdate": ["Date Added:", "2011-12-15"],
