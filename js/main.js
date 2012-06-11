@@ -213,7 +213,7 @@ $('#myxmlbutton').bind('click', function(){
 		dataType: 'xml',
 		type: 'GET',
 		success: function(xml){
-			$(xml).find("scrapbookframe").each(function(){
+			$(xml).find("scrapbookNode").each(function(){
    				var jtitle = $(this).find('jtitle').text();
    				var jdate = $(this).find('jdate').text();
    				var groups = $(this).find('groups').text();
