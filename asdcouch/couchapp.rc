@@ -1,7 +1,13 @@
 {
   "env": {
-    "local": {
-      "db": "http://127.0.0.1:5984/asdproject3"
+    "default": {
+      "db": "http://user:password@127.0.0.1:5984/development"
+    },
+    "staging": {
+      "db": "http://user:password@127.0.0.1:5984/staging"
+    },
+    "production": {
+      "db": "http://user:password@127.0.0.1:5984/production"
     }
   }
 }

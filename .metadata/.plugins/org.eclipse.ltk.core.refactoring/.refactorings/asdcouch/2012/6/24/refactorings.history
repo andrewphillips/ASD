@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 6 element(s) from project &apos;asdcouch&apos;&#x0A;- Original project: &apos;asdcouch&apos;&#x0A;- Original elements:&#x0A;     evently&#x0A;     lists&#x0A;     shows&#x0A;     updates&#x0A;     vendor&#x0A;     README.md" description="Delete elements" element1="app/shows" element2="app/lists" element3="app/README.md" element4="app/vendor" element5="app/updates" element6="app/evently" elements="0" flags="589830" id="org.eclipse.wst.jsdt.ui.delete" resources="6" stamp="1339712904302" subPackages="false" version="1.0"/>
+</session>
