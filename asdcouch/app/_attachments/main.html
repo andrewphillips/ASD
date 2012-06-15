@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <!-- Andrew Phillips -->
-<!-- ASD 1206 Project 1 -->
+<!-- ASD 1206 Project 3 -->
 
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
+		<meta name="viewport" content="initial-scale=1.0, width=device-width"/>
 	<title>Journeys - Adventure Scrapbook</title>
-	<!--<meta name="robots" content="index, follow"/> -->
-	<!--Mobile Viewport Optimized: j.mp/bplateviewport -->
-	<meta name="viewport" content="initial-scale=1.0, width=device-width"/>
-	<meta name="MobileOptimized" content="320" />
-	<meta name="HandheldFriendly" content="true" />
-	<!-- Mobile IE needs ClearType for smoothing fonts -->
-	<meta http-equiv="cleartype" content="on">
-	<!-- StyleSheets under here -->
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
-	<!-- JavaScript Modernizr allows some HTML5 features -->
-	<script src="js/libs/modernizr.custom.min.js"></script>
+	<link rel="stylesheet" href="style.css"/>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script src="modernizr.custom.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
+	<script type="text/javascript" src="jquery.validate.min.js"></script>
+	<script src="jquery.couch.js"></script>
 </head>
 <body>
 <div data-role="page" id="home">
@@ -32,7 +28,7 @@
 		</p>	
 		</header>
 		<div id="cta1">
-			<a href="#additem"><img src="images/add_new.png" alt="add journey"/></a>
+			<a href="#additem"><img src="add_new.png" alt="add journey"/></a>
 		</div>
 
 		<div id="getdata" data-role="fieldcontain">
@@ -61,7 +57,7 @@
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#home" data-icon="home">Home</a></li>
-				<li><a href="#" class="displayLink" data-icon="search">List</a></li>
+				<li><a href="#scrapbooklist" data-icon="search">List</a></li>
 				<li><a href="#additem" data-icon="plus">Add New</a></li>	
 			</ul>
 		</div>
@@ -74,7 +70,7 @@
 
 <div data-role="page" id="additem">
 	<div data-role="header" data-theme="c" id="listhead" class="homehead">
-		<h1 id="headerItem">Journeys</h1>
+		<h1 id="headnothome">Journeys</h1>
 	</div>
 	<!--/header-->
 	<div data-role="content" class="content">
@@ -88,7 +84,7 @@
 			</div>
 			<div data-role="fieldcontain" id="scrapbookDate">
 				<label for="jdate">Journey Date</label>
-				<input name="jdate" type="date" id="jdate" /><!--class="date required" -->
+				<input name="jdate" id="jdate" class="date required" /> <!-- type="date" -->
 <!--				<small class="prompt">MM/DD/YYYY</small> -->
 			</div>
 			<div data-role="fieldcontain" id="addMedia">
@@ -115,12 +111,17 @@
 				<textarea id="notes"></textarea>
 			</div>
 
-			<div data-role="fieldcontain">
-				<input id="submit" type="submit" value="Save Journey" data-theme="a" />
+			<div id="submitreset" data-role="fieldcontain">
+			<div id="submit-reset-buttons">
+<!--				<div class="ui-grid-a">
+					<div class="ui-block-a">  -->
+					<input id="submit" type="submit" class="addjourneybutton" value="Save Journey" data-theme="a" />
+					<input id="reset"  type="reset" value="Clear All" data-theme="c">
 			</div>
-			<div data-role="fieldcontain" id="reset" >
-				<input type="reset" value="Clear All" data-theme="c" />
+			<div id="edit-item-button" style="display: none;">
+				<input type="button" id="edit-item" value="Edit Item">
 			</div>
+		</div>	
 		</form>
 		
 		<div id="list">	</div>
@@ -137,7 +138,7 @@
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#home" data-icon="home">Home</a></li>
-				<li><a href="#" class="displayLink" data-icon="search">List</a></li>
+				<li><a href="#scrapbooklist" data-icon="search">List</a></li>
 				<li><a href="#additem" data-icon="plus">Add New</a></li>	
 			</ul>
 		</div>
@@ -150,10 +151,10 @@
 
 <div data-role="page" id="construction">
 	<div data-role="header" data-theme="c" id="constructhead" class="homehead">
-		<h1 id="headerh1">Journeys</h1>
+		<h1 id="headnothome">Journeys</h1>
 	</div>
 	<!-- /header -->
-			<div data-role="content" class="content">
+			<div id="paragraph" data-role="content" class="content">
 				<p>This media system is under construction.  Check back soon!!</p>
 			</div>
 	
@@ -164,7 +165,7 @@
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#home" data-icon="home">Home</a></li>
-				<li><a href="#" class="displayLink" data-icon="search">List</a></li>
+				<li><a href="#scrapbooklist" data-icon="search">List</a></li>
 				<li><a href="#additem" data-icon="plus">Add New</a></li>	
 			</ul>
 		</div>
@@ -173,11 +174,31 @@
 </div>
 <!-- /page construction -->
 
+<div data-role="page" id="myscrapbooklist" data-add-back-btn="true">
+
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<ul id="scrapbooklist" data-role="listview" data-filter="true">
+		</ul>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#scrapbooklist" data-icon="search">List</a></li>
+				<li><a href="#additem" data-icon="plus">Add New</a></li>	
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+		
+</div><!-- /page -->
 
 <!-- JavaScript under here -->
-<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
-<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
-<script type="text/javascript" src="js/JQmain.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
