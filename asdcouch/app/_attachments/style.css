@@ -12,7 +12,7 @@ body {
 }
 .ui-body-a, .ui-body-b,.ui-body-c,.ui-body-d,.ui-body-e{
 	color: black;
-	background: url(../images/concrete9_small.jpg) repeat top left ;
+	background: url(concrete9_small.jpg) repeat top left ;
 }
 
 ul{
