@@ -60,7 +60,7 @@
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#home" data-icon="home">Home</a></li>
-				<li><a href="#" class="displayLink" data-icon="search">List</a></li>
+				<li><a href="#scrapbooklist" data-icon="search">List</a></li>
 				<li><a href="#additem" data-icon="plus">Add New</a></li>	
 			</ul>
 		</div>
@@ -114,12 +114,19 @@
 				<textarea id="notes"></textarea>
 			</div>
 
-			<div data-role="fieldcontain">
-				<input id="submit" type="submit" value="Save Journey" data-theme="a" />
+			<div id="submitreset" data-role="fieldcontain">
+			<div id="submit-reset-buttons">
+<!--				<div class="ui-grid-a">
+					<div class="ui-block-a">  -->
+						<input id="submit" type="submit" class"addjourneybutton" value="Save Journey" data-theme="a" />
+					</div>
+					<div id="reset"  type="reset" value="Clear All" data-theme="c" />
+					</div>
 			</div>
-			<div data-role="fieldcontain" id="reset" >
-				<input type="reset" value="Clear All" data-theme="c" />
+			<div id="edit-item-button" style="display: none;">
+				<input type="button" id="edit-item" value="Edit Item" />
 			</div>
+		</div>	
 		</form>
 		
 		<div id="list">	</div>
@@ -136,7 +143,7 @@
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#home" data-icon="home">Home</a></li>
-				<li><a href="#" class="displayLink" data-icon="search">List</a></li>
+				<li><a href="#scrapbooklist" data-icon="search">List</a></li>
 				<li><a href="#additem" data-icon="plus">Add New</a></li>	
 			</ul>
 		</div>
@@ -163,7 +170,7 @@
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#home" data-icon="home">Home</a></li>
-				<li><a href="#" class="displayLink" data-icon="search">List</a></li>
+				<li><a href="#scrapbooklist" data-icon="search">List</a></li>
 				<li><a href="#additem" data-icon="plus">Add New</a></li>	
 			</ul>
 		</div>
@@ -172,6 +179,29 @@
 </div>
 <!-- /page construction -->
 
+<div data-role="page" id="myscrapbooklist" data-add-back-btn="true">
+
+	<div data-role="header" data-theme="c" id="headother">
+		<h1 id="headnothome">Journeys</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<ul id="scrapbooklist" data-role="listview" data-filter="true">
+		</ul>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#scrapbooklist" data-icon="search">List</a></li>
+				<li><a href="#additem" data-icon="plus">Add New</a></li>	
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+		
+</div><!-- /page -->
 
 <!-- JavaScript under here -->
 <script src="main.js"></script>

@@ -1,22 +1,6 @@
 // <!-- ASD 1206 Project 2 -->
-//Yes, I still need to change  over to pageInIt---I will get there….(and update to the newer jQuery)--I did not get all things fixed from last week like I thought I would.
-
-
-$(document).ready(function() {
-
-
-
-function autoFillData(){
-
-	//Store the JSON object into Local Storage
-	for (var n in json){
-		var id = Math.floor(Math.random() * 100000001);
-		localStorage.setItem(id, JSON.stringify(json[n]));
-	}
-    }
-    
-    
-function saveData(id) {
+//Save    
+$('#submit').live('click', function saveData(id) {
     var d = new Date();
     var key = (d.getTime());
     var jtitle = $("#jtitle").val();
@@ -30,7 +14,7 @@ function saveData(id) {
     localStorage.setItem(key, item);
     location.reload();
     alert("Saved to Scrapbook!");
-}
+});
 
 
 function toggleControls(n) {
@@ -49,10 +33,10 @@ function toggleControls(n) {
     }
 }
 
-function getData() {
+// Get
+$('#displayLink').live('click', function getData() {
 	toggleControls("on");
     var getListdiv = $('#list')[0];
-    
     for (var i = 0, j = localStorage.length; i < j; i++) {
         var key = localStorage.key(i);
         var value = localStorage.getItem(key);
@@ -61,15 +45,11 @@ function getData() {
        $('<div>').attr({
             'class': 'listDiv'
         }).appendTo('#list');
-        $('<h3>').html(value[0]).appendTo('.listDiv');
-       	$('<img>').attr({
-       	   'src': value[1],
-           'width': '300'
-        }).appendTo('.listDiv');
-        $('<p>').html('Date: ' + value[2]).appendTo('.listDiv');
-        $('<p>').html('Region: ' + value[3]).appendTo('.listDiv');
-        $('<p>').html('Rating: ' + value[5]).appendTo('.listDiv');
-        $('<p>').html('Notes: ' + value[6]).appendTo('.listDiv');
+        $('<p>').html('Name: ' + value[0]).appendTo('.listDiv');
+        $('<p>').html('Date: ' + value[1]).appendTo('.listDiv');
+        $('<p>').html('Region: ' + value[2]).appendTo('.listDiv');
+        $('<p>').html('Rating: ' + value[3]).appendTo('.listDiv');
+        $('<p>').html('Notes: ' + value[4]).appendTo('.listDiv');
         $('<p>').html($('<a>').attr({
             'href': '#',
             'onclick': 'deleteItem(' + key + ');'
@@ -80,7 +60,7 @@ function getData() {
         }).html('Edit Entry')).appendTo('.listDiv');
 
     }
-};
+});
 
 
 // EDIT 
@@ -90,10 +70,10 @@ function editItem(id) {
 	value = value.split(',');
 	toggleControls("off");
     var jtitle = value[0];
-    var jdate = value[2];
-    var groups = value[3];
-    var rating = value[5];
-    var notes = value[6];
+    var jdate = value[1];
+    var groups = value[2];
+    var rating = value[3];
+    var notes = value[4];
 
     $('#jtitle').val(jtitle);
     $('#jdate').val(jdate);
@@ -101,7 +81,7 @@ function editItem(id) {
 	$('#rating').val(rating);
     $('#notes').val(notes);
 
-    // show edit item button, hide submit button
+    // show edit , hide submit 
     var editButton = $('#edit-item-button').css('display', 'block');
     var subresButtons = $('#submit-reset-buttons').css('display', 'none');
     var itemList = $('#list').css('display', 'none');
@@ -150,28 +130,37 @@ function clearLocal() {
 }
 
 // VALIDATE
-function validate() {
-
 $("#scrapbookForm").validate({
-    invalidHandler: function(form, validator) {},
+    //invalidHandler: function(form, validator) {},
     submitHandler: function(){
 	saveData();
         console.log("Call Action");
     }
 });
+
+function applyDefaultplaceholder(elem, val) {
+  elem.style.color = '#999';
+  elem.placeholder = val;
+  elem.onfocus = function() {
+    if(this.placeholder == val) {
+      this.style.color = '';
+      this.placeholder = '';
+    }
+  }
+  elem.onblur = function() {
+    if(this.placeholder == '') {
+      this.style.color = '#999';
+      this.placeholder = val;
+    }
+  }
 }
 
-
-/*
 $(document).ready( function() {
     var now = new Date();
     var today = now.getMonth() + '/' + now.getDate() + '/' + now.getFullYear();
-    $('#jdate').val(today);
- */      
-//});
-//$.mobile.selectmenu.prototype.options.hidePlaceholderMenuItems = false;
-
-
+    $('#ddate').val(today);
+});
+$.mobile.selectmenu.prototype.options.hidePlaceholderMenuItems = false;
 
 
 
@@ -180,7 +169,7 @@ $(document).ready( function() {
 // JSON  
 $('#myjsonbutton').bind('click', function(){
 	$('#scrapbookdata').empty();
-	$('<p>').html('IMPORT JSON ').appendTo('#scrapbookdata');
+	$('<p>').html('IMPORT JSON').appendTo('#scrapbookdata');
 	$.ajax({
 		url: 'xhr/data.json',
 		dataType: 'json',
@@ -267,10 +256,10 @@ $('#mycsvbutton').bind('click', function(){
 			$(''+
 					'<div class="scrapbooktitle">'+
 						'<h3>'+ thisScrapbook[0] +'</h3>'+
-						'<p>Date Added: '+ thisScrapbook[2] +'</p>'+
-						'<p>Category: '+ thisScrapbook[3] +'</p>'+
-						'<p>Rating: '+ thisScrapbook[5] +'</p>'+
-						'<p>Notes: '+ thisScrapbook[6] +'</p>'+
+						'<p>Date Added: '+ thisScrapbook[1] +'</p>'+
+						'<p>Category: '+ thisScrapbook[2] +'</p>'+
+						'<p>Rating: '+ thisScrapbook[3] +'</p>'+
+						'<p>Notes: '+ thisScrapbook[4] +'</p>'+
 					'</div>'
 				).appendTo('#scrapbookdata');
 			console.log(lines);	
@@ -280,13 +269,39 @@ $('#mycsvbutton').bind('click', function(){
 	return false;
 });
 
-var json;
-
-// Save data!!
-$('#submit').live('click', validate);
-
-// GET Data
-$('.displayLink').live('click', getData);
-
-
+// couchDB
+$('#myscrapbooklist').live("pageshow", function(){
+	$('#scrapbooklist').empty();
+	$.ajax({
+		"url": '_views/entries',
+		"dataType": 'json',
+		"success": function(data){
+			$.each(data.rows, function(index, scrapbook){
+   				var jname = design.value.jname;
+   				var groups = design.value.groups;
+   				var rating = design.value.rating;
+   				var notes = design.value.notes;
+    			$(''+
+					'<li class="scrapbooktitle">'+
+						'<h3>'+ jname +'</h3>'+
+						'<ul>'+
+						'<li>'+
+						'<div>'+
+						'<ul class="inner">'+
+						'<li>Name: '+ jname +'</li>'+
+						'<li>Category: '+ groups +'</li>'+
+						'<li>Rating: '+ rating +'</li>'+
+						'<li>Notes: '+ notes +'</li>'+
+						'</ul>'+
+						'<p><a href="#myscrapbooklist" data-role="button">Return to List</a></p>'+
+						'</div>'+
+						'</li>'+
+						'</ul>'+
+					'</li>'
+				).appendTo('#scrapbooklist');
+			});
+			$('#scrapbooklist').listview('refresh');
+		}
+	});
+	return false;
 });
