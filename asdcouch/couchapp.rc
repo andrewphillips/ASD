@@ -2,6 +2,9 @@
   "env": {
     "local": {
       "db": "http://127.0.0.1:5984/asdproject3"
+    },
+        "cloudant": {
+      "db": "https://andrewphillips:martha4576@andrewphillips.cloudant.com/asdproject/"
     }
   }
 }
