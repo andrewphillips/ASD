@@ -4,7 +4,7 @@ ASD 1206 Project 1
 */
 
 body,html{
-	height: 100%;
+	height: 100% !Important;
 }
 body {
 	font: 16px Helvetica, Arial, Sans-serif !Important;
@@ -21,27 +21,27 @@ ul{
 }
 
 .ui-collapsible .ui-btn-inner {
-	background: #d82b24;
-	color: #fff;
-	text-shadow: none;
-	text-transform: uppercase;
+	background: #d82b24 !Important;
+	color: #fff !Important;
+	text-shadow: none !Important;
+	text-transform: uppercase !Important;
 }
 
 .ui-collapsible .ui-btn-corner-all{
-	color: white;
-	background: #455e9a;
+	color: white !Important;
+	background: #455e9a !Important;
 }
 
 #centerstage{
-	height: 145px;
-	width: 281px;
-	margin: 0 auto 20px;
-	clear: both;
+	height: 145px !Important;
+	width: 281px !Important;
+	margin: 0 auto 20px !Important;
+	clear: both !Important;
 }
 
 #homehead{
-	background: none;
-	border: none;
+	background: none !Important;
+	border: none !Important;
 }
 
 #headerh1{
@@ -58,64 +58,64 @@ input.ui-input-text, textarea.ui-input-text {
 }
 
 header p{
-	font-size: 16px;
-	padding: 0;
-	text-align: center;
-	margin: 0;
-	text-shadow: none;
-	color: black;
+	font-size: 16px !Important;
+	padding: 0 !Important;
+	text-align: center !Important;
+	margin: 0 !Important;
+	text-shadow: none !Important;
+	color: black !Important;
 }
 
 #cta1{
-	padding-bottom: 20px;
-	margin-left: auto;
-	margin-bottom: 10px;
-	margin-right: auto;
-	margin-top: 10px;
-	height: 110px;
-	width: 281px;
-	clear: both;
+	padding-bottom: 20px !Important;
+	margin-left: auto !Important;
+	margin-bottom: 10px !Important;
+	margin-right: auto !Important;
+	margin-top: 10px !Important;
+	height: 110px !Important;
+	width: 281px !Important;
+	clear: both !Important;
 }
 
 #headnothome{
-	margin:10px auto 0;
-	text-indent: -9999px;
-	padding-top: 10px;
-	height: 50px;
-	background: url(journeys_small.png) no-repeat top center;
+	margin:10px auto 0 !Important;
+	text-indent: -9999px !Important;
+	padding-top: 10px !Important;
+	height: 50px !Important;
+	background: url(journeys_small.png) no-repeat top center !Important;
 }
 
 #headother{
-	border: #dedede solid 1px;
+	border: #dedede solid 1px !Important;
 }
 
 .ui-collapsible-content {
-    background: #969696;
+    background: #969696 !Important;
 }
 
 #construction{
-	background: #455e9a;
-	color: white;
+	background: #455e9a !Important;
+	color: white !Important;
 }
 
 #catbrowse{
-	color: black;
-	text-align: center;
-	text-transform: uppercase;
+	color: black !Important;
+	text-align: center !Important;
+	text-transform: uppercase !Important;
 }
 
 label.error{
-	border-color: #ff282b;
-	border-style: groove;
-	background-color: white;
-	display:block; 
-	margin: 10px 0; 
-	color: #cc0000;
+	border-color: #ff282b !Important;
+	border-style: groove !Important;
+	background-color: white !Important;
+	display:block !Important; 
+	margin: 10px 0 !Important; 
+	color: #cc0000 !Important;
 }
 .prompt{
-	background-color: #464646;
-	color: white;
-	margin-left: 8px;
+	background-color: #464646 !Important;
+	color: white !Important;
+	margin-left: 8px !Important;
 }
 paragraph {
 	margin: 1px !Important;
@@ -125,7 +125,7 @@ paragraph {
 	font-size: 16px !Important;
 }
 a.ui-slider-handle {
-    background:  #464646;
+    background:  #464646 !Important;
 }
     
     /*#scrapbookForm{
@@ -140,20 +140,20 @@ a.ui-slider-handle {
 }*/
 
 #container{
-	margin: 0 0 0 10px;
-	padding: 10px 20px 20px;
-	background: #fff; 	
-	-moz-border-radius: 10px; 
-	border-radius: 10px;
-	-moz-box-shadow: 0 0 5px #ccc;
-	-webkit-box-shadow: 0 0 5px #ccc;
-    box-shadow: 0 0 5px #ccc;
+	margin: 0 0 0 10px !Important;
+	padding: 10px 20px 20px !Important;
+	background: #fff !Important; 	
+	-moz-border-radius: 10px !Important; 
+	border-radius: 10px !Important;
+	-moz-box-shadow: 0 0 5px #ccc !Important;
+	-webkit-box-shadow: 0 0 5px #ccc !Important;
+    box-shadow: 0 0 5px #ccc !Important;
 }
 #container p{
-	font-size: 22px;
-	padding: 0;
-	margin: 0 0 20px;
-	text-align: center;
+	font-size: 22px !Important;
+	padding: 0 !Important;
+	margin: 0 0 20px !Important;
+	text-align: center !Important;
 }
 
 

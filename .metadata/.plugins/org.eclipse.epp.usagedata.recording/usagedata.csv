@@ -1,0 +1,33 @@
+what,kind,bundleId,bundleVersion,description,time
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1339803824918
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1339804044186
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1339804045129
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1339804213040
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1339804214598
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1339804217772
+executed,command,com.pittypanda.plugins.couch,1.0.0.201010261838,"com.pittypanda.plugins.couch.commands.push",1339804218128
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1339804221550
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1339804224906
+executed,command,com.pittypanda.plugins.couch,1.0.0.201010261838,"com.pittypanda.plugins.couch.commands.push",1339804225409
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1339804226299
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1339804373173
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1339804377144
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1339804407974
+closed,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1339804410919
+error,log,,,"Problems saving workspace",1339804418905
+error,log,,,"Problems occurred while trying to save the state of the workbench.",1339804418953
+stopped,bundle,org.eclipse.equinox.p2.ui.sdk,1.0.200.v20110815-1419,"org.eclipse.equinox.p2.ui.sdk",1339804419651
+stopped,bundle,org.eclipse.wst.xsl.jaxp.debug.ui,1.0.200.v201103081922,"org.eclipse.wst.xsl.jaxp.debug.ui",1339804419654
+stopped,bundle,org.eclipse.jdt.debug.ui,3.6.1.v20111006_r372,"org.eclipse.jdt.debug.ui",1339804419661
+stopped,bundle,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui",1339804419763
+stopped,bundle,org.eclipse.wst.dtd.ui,1.0.600.v201103171359,"org.eclipse.wst.dtd.ui",1339804419767
+stopped,bundle,org.eclipse.wst.jsdt.web.ui,1.0.401.v201108152113,"org.eclipse.wst.jsdt.web.ui",1339804419772
+stopped,bundle,org.eclipse.wst.web.ui,1.1.500.v201111030500,"org.eclipse.wst.web.ui",1339804419777
+stopped,bundle,org.eclipse.wst.html.ui,1.0.602.v201202091936,"org.eclipse.wst.html.ui",1339804419784
+stopped,bundle,org.eclipse.wst.css.ui,1.0.601.v201201101544,"org.eclipse.wst.css.ui",1339804419795
+stopped,bundle,org.eclipse.wst.xsl.exslt.ui,1.0.0.v201006012005,"org.eclipse.wst.xsl.exslt.ui",1339804419803
+stopped,bundle,org.eclipse.wst.xsl.ui,1.1.200.v201103082057,"org.eclipse.wst.xsl.ui",1339804419811
+stopped,bundle,org.eclipse.wst.xml.xpath.ui,1.1.100.v201105030025,"org.eclipse.wst.xml.xpath.ui",1339804419819
+stopped,bundle,org.eclipse.wst.xsd.ui,1.2.404.v201105050216,"org.eclipse.wst.xsd.ui",1339804419825
+stopped,bundle,org.eclipse.wst.xsl.debug.ui,1.0.200.v201101281837,"org.eclipse.wst.xsl.debug.ui",1339804419836
+stopped,bundle,org.eclipse.wst.xml.ui,1.1.202.v201112071516,"org.eclipse.wst.xml.ui",1339804419846
