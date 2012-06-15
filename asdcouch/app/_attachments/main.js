@@ -1,4 +1,4 @@
-// <!-- ASD 1206 Project 2 -->
+// <!-- ASD 1206 Project 3 -->
 //Save    
 $('#submit').live('click', function saveData(id) {
     var d = new Date();
