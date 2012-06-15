@@ -1,5 +1,5 @@
-// <!-- ASD 1206 Project 2 -->
-//Yes, I still need to change  over to pageInIt---I will get there….(and update to the newer jQuery)--I did not get all things fixed from last week like I thought I would.
+// <!-- ASD 1206 Project 3 -->
+
 
 
 $(document).ready(function() {
