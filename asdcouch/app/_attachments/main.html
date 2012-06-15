@@ -14,9 +14,6 @@
 	<script src="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
 	<script type="text/javascript" src="jquery.validate.min.js"></script>
 	<script src="jquery.couch.js"></script>
-	<meta name="MobileOptimized" content="320" />
-	<meta name="HandheldFriendly" content="true" />
-	<meta http-equiv="cleartype" content="on">
 </head>
 <body>
 <div data-role="page" id="home">
@@ -87,7 +84,7 @@
 			</div>
 			<div data-role="fieldcontain" id="scrapbookDate">
 				<label for="jdate">Journey Date</label>
-				<input name="jdate" type="date" id="jdate" /><!--class="date required" -->
+				<input name="jdate" id="jdate" class="date required" /> <!-- type="date" -->
 <!--				<small class="prompt">MM/DD/YYYY</small> -->
 			</div>
 			<div data-role="fieldcontain" id="addMedia">
@@ -118,13 +115,13 @@
 			<div id="submit-reset-buttons">
 <!--				<div class="ui-grid-a">
 					<div class="ui-block-a">  -->
-						<input id="submit" type="submit" class"addjourneybutton" value="Save Journey" data-theme="a" />
+						<input id="submit" type="submit" class="addjourneybutton" value="Save Journey" data-theme="a" />
 					</div>
-					<div id="reset"  type="reset" value="Clear All" data-theme="c" />
+					<div id="reset"  type="reset" value="Clear All" data-theme="c">
 					</div>
 			</div>
 			<div id="edit-item-button" style="display: none;">
-				<input type="button" id="edit-item" value="Edit Item" />
+				<input type="button" id="edit-item" value="Edit Item">
 			</div>
 		</div>	
 		</form>

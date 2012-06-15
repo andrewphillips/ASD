@@ -146,13 +146,13 @@ function applyDefaultplaceholder(elem, val) {
       this.style.color = '';
       this.placeholder = '';
     }
-  }
+  };
   elem.onblur = function() {
-    if(this.placeholder == '') {
+    if(this.placeholder === '') {
       this.style.color = '#999';
       this.placeholder = val;
     }
-  }
+  };
 }
 
 $(document).ready( function() {
@@ -277,10 +277,10 @@ $('#myscrapbooklist').live("pageshow", function(){
 		"dataType": 'json',
 		"success": function(data){
 			$.each(data.rows, function(index, scrapbook){
-   				var jname = design.value.jname;
-   				var groups = design.value.groups;
-   				var rating = design.value.rating;
-   				var notes = design.value.notes;
+   				var jname = scrapbook.value.jname;
+   				var groups = scrapbook.value.groups;
+   				var rating = scrapbook.value.rating;
+   				var notes = scrapbook.value.notes;
     			$(''+
 					'<li class="scrapbooktitle">'+
 						'<h3>'+ jname +'</h3>'+
