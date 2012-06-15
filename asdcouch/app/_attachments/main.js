@@ -171,7 +171,7 @@ $('#myjsonbutton').bind('click', function(){
 	$('#scrapbookdata').empty();
 	$('<p>').html('IMPORT JSON').appendTo('#scrapbookdata');
 	$.ajax({
-		url: 'xhr/data.json',
+		url: 'data.json',
 		dataType: 'json',
 		type: 'GET',
 		success: function(response){
@@ -198,7 +198,7 @@ $('#myxmlbutton').bind('click', function(){
 	$('#scrapbookdata').empty();
 	$('<p>').html('IMPORT XML').appendTo('#scrapbookdata');
 	$.ajax({
-		url: 'xhr/data.xml',
+		url: 'data.xml',
 		dataType: 'xml',
 		type: 'GET',
 		success: function(xml){
@@ -231,7 +231,7 @@ $('#mycsvbutton').bind('click', function(){
 	$('<p>').html('IMPORT CSV').appendTo('#scrapbookdata');
 	 $.ajax({
         type: "GET",
-        url: "xhr/data.csv",
+        url: "data.csv",
         dataType: "text",
         success: function(data) {
         	var textLines = data.split(/\r\n|\n/);
