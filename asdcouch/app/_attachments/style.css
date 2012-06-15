@@ -7,17 +7,17 @@ body,html{
 	height: 100%;
 }
 body {
-	font: 14px Helvetica, Arial, Sans-serif;
-	color: black;
+	font: 14px Helvetica, Arial, Sans-serif !Important;
+	color: black !Important;
 }
 .ui-body-a, .ui-body-b,.ui-body-c,.ui-body-d,.ui-body-e{
 	color: black;
-	background: url(concrete9_small.jpg) repeat top left ;
+	background: url(concrete9_small.jpg) repeat top left !Important;
 }
 
 ul{
-	padding: 0;
-	list-style:none;
+	padding: 0 !Important;
+	list-style:none !Important;
 }
 
 .ui-collapsible .ui-btn-inner {
