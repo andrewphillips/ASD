@@ -1,4 +1,4 @@
-/*
+ /*
 Andrew Phillips
 ASD 1206 Project 1
 */
@@ -12,7 +12,7 @@ body {
 }
 .ui-body-a, .ui-body-b,.ui-body-c,.ui-body-d,.ui-body-e{
 	color: black;
-	background: url(concrete9_small.jpg) repeat top left !Important;
+	background: url(../images/concrete9_small.jpg) repeat top left !Important;
 }
 
 ul{
@@ -50,7 +50,7 @@ ul{
 	color: black;
 	padding-top: 10px;
 	height: 100px;
-	background: url(journeys_main.png) no-repeat top center;
+	background: url(../images/journeys_main.png) no-repeat top center;
 }
 
 input.ui-input-text, textarea.ui-input-text {
@@ -82,7 +82,7 @@ header p{
 	text-indent: -9999px !Important;
 	padding-top: 10px !Important;
 	height: 50px !Important;
-	background: url(journeys_small.png) no-repeat top center !Important;
+	background: url(../images/journeys_small.png) no-repeat top center !Important;
 }
 
 #headother{
