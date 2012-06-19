@@ -269,6 +269,7 @@ $('#mycsvbutton').bind('click', function(){
 	return false;
 });
 
+							/*
 // couchDB
 $('#myscrapbooklist').live("pageshow", function(){
 	$('#scrapbooklist').empty();
@@ -304,4 +305,30 @@ $('#myscrapbooklist').live("pageshow", function(){
 		}
 	});
 	return false;
+});         
+			*/
+
+// <><><><><><><>WEEK 4 GOODIES<><><><><><>
+
+//Listview
+
+$('#couchme').live("pageshow", function(){
+	$.couch.db("asdproject").view("asdproject/entries",{
+			success: function(data) {
+			$('#couchlist').empty();
+			$.each(data.rows, function(index, value){
+				var id = value.id;
+				var item = (value.value || value.doc);
+				 $('#couchlist').append(
+				 	$('<li>').append(
+				 		$('<a>').attr("href", "scrapbook.html?entry=" + id)
+				 		.html('<h3>'+item.jname+'</h3>'+
+				 			  '<p>'+item.notes+'</p>'
+				 		)
+				 	)
+				 );		 
+			}); 
+			$('#couchlist').listview('refresh');
+		}
+	});
 });
