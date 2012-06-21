@@ -1,8 +1,9 @@
-// <!-- ASD 1206 Project 3 -->
+// <!-- ASD 1206 Project 4 -->
 //Save    
 
 
 /*
+//Comment out old code
 $('#submit').live('click', function saveData(id) {
     var d = new Date();
     var key = (d.getTime());
@@ -139,9 +140,7 @@ function clearLocal() {
 
 // VALIDATE
 $("#scrapbookForm").validate({
-    //invalidHandler: function(form, validator) {},
     submitHandler: function(){
-	saveData();
         console.log("Call Action");
     }
 });
@@ -360,7 +359,7 @@ var urlVars = function(){
 // single view on new page
 
 $('#entry').live("pageshow", function(){
-	var design = urlVars()["entry"];
+	var entry = urlVars()["entry"];
 		
 	$.couch.db("asdproject").openDoc(entry, {
     	success: function(data) {
@@ -406,10 +405,10 @@ $('#entry').live("pageshow", function(){
 });
 
 
-// edit a design
+// edit an entry
 
 $('#editmy-entry').live('click', function(){
-	var design = urlVars()["entry"];
+	var entry = urlVars()["entry"];
 	$.mobile.changePage("main.html#additem");
 	$.couch.db("asdproject").openDoc(entry, {
     	success: function(data) {
@@ -472,14 +471,14 @@ $('#editmy-entry').live('click', function(){
 
 $('#submit').bind('click', function(){
 	var d = new Date();
-    var myid = (d.getTime());
+   // var myid = (d.getTime());
 	var jname = $("#jname").val();
     var jdate = $("#jdate").val();
     var groups = $("#groups").val();
     var rating = $("#rating").val();
     var notes = $("#notes").val();
     var item = {
-    	"_id": "entry:" + groups + ":" + myid,
+    	"_id": "entry:" + groups,
     	"jname": dname, 
     	"jdate": ddate, 
     	"groups": groups, 
