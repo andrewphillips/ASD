@@ -1,5 +1,8 @@
 // <!-- ASD 1206 Project 3 -->
 //Save    
+
+
+/*
 $('#submit').live('click', function saveData(id) {
     var d = new Date();
     var key = (d.getTime());
@@ -128,6 +131,11 @@ function clearLocal() {
         return false;
     }
 }
+
+*/
+
+
+
 
 // VALIDATE
 $("#scrapbookForm").validate({
@@ -315,11 +323,11 @@ $('#myscrapbooklist').live("pageshow", function(){
 $('#couchme').live("pageshow", function(){
 	$.couch.db("asdproject").view("asdproject/entries",{
 			success: function(data) {
-			$('#couchlist').empty();
+			$('#couchbooklist').empty();
 			$.each(data.rows, function(index, value){
 				var id = value.id;
 				var item = (value.value || value.doc);
-				 $('#couchlist').append(
+				 $('#couchbooklist').append(
 				 	$('<li>').append(
 				 		$('<a>').attr("href", "scrapbook.html?entry=" + id)
 				 		.html('<h3>'+item.jname+'</h3>'+
@@ -328,7 +336,168 @@ $('#couchme').live("pageshow", function(){
 				 	)
 				 );		 
 			}); 
-			$('#couchlist').listview('refresh');
+			$('#couchbooklist').listview('refresh');
 		}
 	});
+});
+
+//get the key
+
+var urlVars = function(){
+	var urlData = $($.mobile.activePage).data("url");
+	var urlParts = urlData.split('?');
+	var urlPairs = urlParts[1].split('&');
+	var urlValues = {};
+	for(var pair in urlPairs){
+		var keyValue = urlPairs[pair].split('=');
+		var key = decodeURIComponent(keyValue[0]);
+		var value = decodeURIComponent(keyValue[1]);
+		urlValues[key] = value;
+	}
+	return urlValues;
+};
+
+// single view on new page
+
+$('#entry').live("pageshow", function(){
+	var design = urlVars()["entry"];
+		
+	$.couch.db("asdproject").openDoc(entry, {
+    	success: function(data) {
+    			var jname = data.jname;
+				var jdate = data.jdate;
+				var groups = data.groups;
+				var rating = data.rating;
+				var notes = data.notes;
+        	$('<div class="individual">'+
+        			'<h3>Name: '+ jname +'</h3>'+
+					'<ul class="inner">'+
+					'<li>Date: '+ jdate +'</li>'+
+					'<li>Category: '+ groups +'</li>'+
+					'<li>Rating: '+ rating +'</li>'+
+					'<li>Notes: '+ notes +'</li>'+
+					'<li><a href="#" id="editmy-entry">Edit Entry</a></li>' + 
+		        	'<li><a href="#" id="deletemy-entry">Delete Entry</a></li>'+
+					'</ul>'+
+					'</div>' 
+        	  
+        	).appendTo('#scrapbookitems');
+        	
+        	$('#deletemy-entry').live('click', function(){
+        		var ask = confirm("Are you sure you want to remove this from your collection?");
+        		if(ask) {
+        		$.couch.db("asdproject").removeDoc(data, {
+        			
+        			success: function(data) {
+        				console.log(data);
+        				document.location.href = 'main.html';
+        			},
+        			error: function(status) {
+        				console.log(status);
+        			}
+        		});
+        		}else{ 
+        			alert("The entry was not removed.");
+        			document.location.href = 'main.html';
+        		}
+        	});
+        }
+	});
+});
+
+
+// edit a design
+
+$('#editmy-entry').live('click', function(){
+	var design = urlVars()["entry"];
+	$.mobile.changePage("main.html#additem");
+	$.couch.db("asdproject").openDoc(entry, {
+    	success: function(data) {
+    		jname = data.jname;
+    		jdate = data.jdate;
+    		groups = data.groups;
+    		rating = data.rating;
+    		notes = data.notes;
+			$('#jname').val(jname);
+		    $('#jdate').val(jdate);
+		    $('#groups').val(groups).selectmenu('refresh', true);
+			$('#rating').val(rating);
+		    $('#notes').val(notes);
+        
+			// show edit item button, hide submit button
+			var editButton = $('#edit-item-button').css('display', 'block');
+			var subresButtons = $('#submit-reset-buttons').css('display', 'none');
+			var itemList = $('#list').css('display', 'none');
+			
+			// save changes
+			$('#edit-item').bind('click', function(){
+				console.log("edit-item button was pressed");
+				var jname = $('#jname').val();
+			    var jdate = $('#jdate').val();
+			    var groups = $('#groups').val();
+				var rating = $('#rating').val();
+			    var notes = $('#notes').val();
+			    var item = {
+					"_id": data._id,
+					"_rev": data._rev,
+					"jname": jname,
+					"jdate": jdate,
+					"groups": groups,
+					"rating": rating,
+					"notes": notes		
+					};
+					console.log(item);
+				
+				$.couch.db("asdproject").saveDoc(item, {
+					success: function(data) {
+						console.log(data);
+						alert("Entry updated!");
+						document.location.href = 'main.html';
+					},
+					error: function(status) {
+        				console.log(status);
+        				alert("Entry was not updated.");
+    				}
+				});
+			return false;
+			});
+		}
+	});
+	
+});
+
+
+
+// save IT
+
+$('#submit').bind('click', function(){
+	var d = new Date();
+    var myid = (d.getTime());
+	var jname = $("#jname").val();
+    var jdate = $("#jdate").val();
+    var groups = $("#groups").val();
+    var rating = $("#rating").val();
+    var notes = $("#notes").val();
+    var item = {
+    	"_id": "entry:" + groups + ":" + myid,
+    	"jname": dname, 
+    	"jdate": ddate, 
+    	"groups": groups, 
+    	"rating": rating, 
+    	"notes": notes
+    };
+	console.log(item);
+	$.couch.db("asdproject").saveDoc(item, {
+		success: function(data) {
+			console.log(data);
+			alert("Entry saved!");
+			document.location.href = 'main.html'; 
+		},
+		error: function(status) {
+			console.log(status);
+			alert("Entry was not saved.");
+		}
+	});
+return false;
+
 });
