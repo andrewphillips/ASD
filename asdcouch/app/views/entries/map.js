@@ -1,6 +1,6 @@
-function(doc) {
-  if (doc._id.substr(0,5) === "entries:") {
-    emit(doc._id.substr(5), {
+ function(doc) {
+  if (doc._id.substr(0,8) === "entries:") {
+    emit(doc._id.substr(8), {
     	"jtitle": doc.jtitle,
     	"jdate": doc.jdate,
     	"groups": doc.groups,
@@ -8,4 +8,4 @@ function(doc) {
     	"notes": doc.notes
     });
   }
-};
+};  
