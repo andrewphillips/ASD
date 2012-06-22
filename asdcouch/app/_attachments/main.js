@@ -165,7 +165,7 @@ function applyDefaultplaceholder(elem, val) {
 $(document).ready( function() {
     var now = new Date();
     var today = now.getMonth() + '/' + now.getDate() + '/' + now.getFullYear();
-    $('#ddate').val(today);
+    $('#jdate').val(today);
 });
 $.mobile.selectmenu.prototype.options.hidePlaceholderMenuItems = false;
 
@@ -285,18 +285,18 @@ $('#myscrapbooklist').live("pageshow", function(){
 		"dataType": 'json',
 		"success": function(data){
 			$.each(data.rows, function(index, scrapbook){
-   				var jname = scrapbook.value.jname;
+   				var jtitle = scrapbook.value.jtitle;
    				var groups = scrapbook.value.groups;
    				var rating = scrapbook.value.rating;
    				var notes = scrapbook.value.notes;
     			$(''+
 					'<li class="scrapbooktitle">'+
-						'<h3>'+ jname +'</h3>'+
+						'<h3>'+ jtitle +'</h3>'+
 						'<ul>'+
 						'<li>'+
 						'<div>'+
 						'<ul class="inner">'+
-						'<li>Name: '+ jname +'</li>'+
+						'<li>Name: '+ jtitle +'</li>'+
 						'<li>Category: '+ groups +'</li>'+
 						'<li>Rating: '+ rating +'</li>'+
 						'<li>Notes: '+ notes +'</li>'+
@@ -329,7 +329,7 @@ $('#couchme').live("pageshow", function(){
 				 $('#couchbooklist').append(
 				 	$('<li>').append(
 				 		$('<a>').attr("href", "scrapbook.html?entry=" + id)
-				 		.html('<h3>'+item.jname+'</h3>'+
+				 		.html('<h3>'+item.jtitle+'</h3>'+
 				 			  '<p>'+item.notes+'</p>'
 				 		)
 				 	)
@@ -363,13 +363,13 @@ $('#entry').live("pageshow", function(){
 		
 	$.couch.db("asdproject").openDoc(entry, {
     	success: function(data) {
-    			var jname = data.jname;
+    			var jtitle = data.jtitle;
 				var jdate = data.jdate;
 				var groups = data.groups;
 				var rating = data.rating;
 				var notes = data.notes;
         	$('<div class="individual">'+
-        			'<h3>Name: '+ jname +'</h3>'+
+        			'<h3>Name: '+ jtitle +'</h3>'+
 					'<ul class="inner">'+
 					'<li>Date: '+ jdate +'</li>'+
 					'<li>Category: '+ groups +'</li>'+
@@ -412,12 +412,12 @@ $('#editmy-entry').live('click', function(){
 	$.mobile.changePage("main.html#additem");
 	$.couch.db("asdproject").openDoc(entry, {
     	success: function(data) {
-    		jname = data.jname;
+    		jtitle = data.jtitle;
     		jdate = data.jdate;
     		groups = data.groups;
     		rating = data.rating;
     		notes = data.notes;
-			$('#jname').val(jname);
+			$('#jtitle').val(jtitle);
 		    $('#jdate').val(jdate);
 		    $('#groups').val(groups).selectmenu('refresh', true);
 			$('#rating').val(rating);
@@ -431,7 +431,7 @@ $('#editmy-entry').live('click', function(){
 			// save changes
 			$('#edit-item').bind('click', function(){
 				console.log("edit-item button was pressed");
-				var jname = $('#jname').val();
+				var jtitle = $('#jtitle').val();
 			    var jdate = $('#jdate').val();
 			    var groups = $('#groups').val();
 				var rating = $('#rating').val();
@@ -439,7 +439,7 @@ $('#editmy-entry').live('click', function(){
 			    var item = {
 					"_id": data._id,
 					"_rev": data._rev,
-					"jname": jname,
+					"jtitle": jtitle,
 					"jdate": jdate,
 					"groups": groups,
 					"rating": rating,
@@ -471,15 +471,15 @@ $('#editmy-entry').live('click', function(){
 
 $('#submit').bind('click', function(){
 	var d = new Date();
-	var jname = $("#jname").val();
+	var jtitle = $("#jtitle").val();
     var jdate = $("#jdate").val();
     var groups = $("#groups").val();
     var rating = $("#rating").val();
     var notes = $("#notes").val();
     var item = {
     	"_id": "entry:" + groups,
-    	"jname": dname, 
-    	"jdate": ddate, 
+    	"jtitle": jtitle, 
+    	"jdate": jdate, 
     	"groups": groups, 
     	"rating": rating, 
     	"notes": notes
