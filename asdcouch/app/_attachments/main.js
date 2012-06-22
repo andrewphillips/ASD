@@ -471,7 +471,6 @@ $('#editmy-entry').live('click', function(){
 
 $('#submit').bind('click', function(){
 	var d = new Date();
-   // var myid = (d.getTime());
 	var jname = $("#jname").val();
     var jdate = $("#jdate").val();
     var groups = $("#groups").val();
