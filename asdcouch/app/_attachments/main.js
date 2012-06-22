@@ -471,13 +471,14 @@ $('#editmy-entry').live('click', function(){
 
 $('#submit').bind('click', function(){
 	var d = new Date();
+    var myid = (d.getTime());
 	var jtitle = $("#jtitle").val();
     var jdate = $("#jdate").val();
     var groups = $("#groups").val();
     var rating = $("#rating").val();
     var notes = $("#notes").val();
     var item = {
-    	"_id": "entry:" + groups,
+    	"_id": "entries:" + groups + ":" + myid,
     	"jtitle": jtitle, 
     	"jdate": jdate, 
     	"groups": groups, 
